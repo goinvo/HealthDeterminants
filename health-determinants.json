@@ -7,20 +7,53 @@
     {
      "name": "Psychological assets",
      "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+      {
+        "name": "Conscientiousness level",
+        "children": [
+          {"name": "Big Five Inventory (BIF)", "size": 3938}
+        ]
+      },
+      {
+        "name": "Self efficacy",
+        "children": [
+          {"name": "NIH Toolbox Self-Efficacy Survey", "size": 3812}
+        ]
+      },
+      {
+        "name": "Optimism level",
+        "children": [
+          {"name": "Life Orientation Test-Revised (LOT-R)", "size": 3812}
+        ]
+      },
+      {"name": "Life satisfaction level", "size": 743},
+      {"name": "Cognitive function late in life", "size": 743}
      ]
     },
     {
      "name": "Negative mood and affects",
      "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
+      {
+        "name": "Stress level",
+        "children": [
+          {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "size": 3534}
+        ]
+      },
+      { "name": "Hopelessness level" },
+      {
+        "name": "Anxiety level",
+        "children": [
+          {"name": "Generalized Axiety Disorder Scale (GAD-7)", "size": 3534},
+          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534}
+        ]
+      },
+      {
+        "name": "Depression level",
+        "children": [
+          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534},
+          {"name": "Patient Health Questionnaire (PHQ-9)", "size": 3534},
+          {"name": "Center for Epidemiologic Studies Depression Scale (CESD-R)", "size": 3534}
+        ]
+      }
      ]
     },
     {
