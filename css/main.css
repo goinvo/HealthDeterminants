@@ -1,0 +1,24 @@
+/*node style*/
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+/*metrics list style*/
+#metricsList {
+	columns: 4;
+	-webkit-columns: 4;
+	-moz-columns: 4;
+	list-style-type: none;
+}

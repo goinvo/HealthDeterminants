@@ -148,11 +148,86 @@
       }
      ]
     },
-    {"name": "Social status", "size": 5842},
+    {
+			"name": "Social status",
+			"children": [
+				{
+					"name": "Occupation",
+					"children": [
+						{"name": "US census", "size": 5842}
+					]
+				},
+				{
+					"name": "Education level",
+					"children": [
+						{"name": "US census", "size": 5842}
+					]
+				},
+				{"name": "Language and literacy level"},
+				{"name": "Family income level"},
+				{
+					"name": "Individual income level",
+					"children": [
+						{"name": "US census", "size": 5842}
+					]
+				},
+				{
+					"name": "Subjective social status",
+					"children": [
+						{"name": "MacArthur SES indicator", "size": 5842}
+					]
+				}
+			]
+		},
     {"name": "History of incarceration", "size": 5842},
-    {"name": "Culture and tradition", "size": 5842},
-    {"name": "Social connectedness", "size": 5842},
-    {"name": "Early childhood education and development", "size": 5842},
+    {
+			"name": "Culture and tradition",
+			"children": [
+				{"name": "Religious involvement"},
+				{"name": "Community cultural norms"},
+				{"name": "Family cultural norms"}
+			]
+		},
+    {
+			"name": "Social connectedness",
+			"children": [
+				{
+					"name": "Quality of community support",
+					"children": [
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+					]
+				},
+				{
+					"name": "Quality of friends support",
+					"children": [
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+					]
+				},
+				{
+					"name": "Quality of family support",
+					"children": [
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+					]
+				},
+				{
+					"name": "Intimate relationships",
+					"children": [
+						{"name": "Intimate Partner Violence: HARK questionnaire", "size": 5842}
+					]
+				},
+				{"name": "Civic participation"}
+			]
+		},
+    {
+			"name": "Early childhood education and development",
+			"children": [
+				{"name": " ",
+					"children": [
+						{"name": "Adverse Childhood Experiences (ACE) score", "size": 5842}
+					]
+				}
+			]
+		},
     {"name": "Discrimination", "size": 5842},
     {"name": "Work conditions", "size": 5842}
    ]
@@ -161,136 +236,228 @@
    "name": "Genetics",
    "children": [
     {
-     "name": "converters",
+     "name": "Genetic",
      "children": [
-      {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
-      {"name": "JSONConverter", "size": 2220}
+      {
+				"name": "Single-gene",
+				"children": [
+					{"name": "Genetic test", "size": 5842}
+				]
+			},
+			{
+				"name": "Chromosomal",
+				"children": [
+					{"name": "Genetic test", "size": 5842}
+				]
+			},
+			{
+				"name": "Multifactorial",
+				"children": [
+					{"name": "Genetic test", "size": 5842}
+				]
+			},
+			{
+				"name": "Mitochondrial DNA-linked",
+				"children": [
+					{"name": "Genetic test", "size": 5842}
+				]
+			},
+			{
+				"name": "Gender",
+				"children": [
+					{"name": "US census", "size": 5842}
+				]
+			},
+			{
+				"name": "Race and ethnicity",
+				"children": [
+					{"name": "US census", "size": 5842}
+				]
+			}
      ]
     },
-    {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
-    {"name": "DataUtil", "size": 3322}
+		{
+     "name": "Body structure",
+     "children": [
+		  {
+				"name": "Age",
+				"children": [
+					{"name": "US census", "size": 5842}
+				]
+			},
+      {
+				"name": " ",
+				"children": [
+					{"name": "Height"}
+				]
+			},
+			{
+				"name": " ",
+				"children": [
+					{"name": "Weight"}
+				]
+			},
+			{
+				"name": " ",
+				"children": [
+					{"name": "Waist-hip ratio"}
+				]
+			}
+     ]
+    },
+		{
+		 "name": "Body function",
+		 "children": [
+			{
+				"name": "Bone density",
+				"children": [
+					{"name": "DXA scan"}
+				]
+			},
+			{
+				"name": "Blood pressure",
+				"children": [
+					{"name": "Sphygmomanometry"}
+				]
+			},
+			{"name": "Biochemical function"},
+			{
+				"name": "Sensory function",
+				"children": [
+					{"name": "Sensory system testing"}
+				]
+			},
+			{
+				"name": "Movement and balance",
+				"children": [
+					{"name": "Motor system testing"}
+				]
+			},
+			{
+				"name": "Strength and robustness",
+				"children": [
+					{"name": "Strength testing"}
+				]
+			},
+			{
+				"name": "Fitness",
+				"children": [
+					{"name": "Cardiorespiratory fitness test"}
+				]
+			}
+		 ]
+		}
    ]
   },
   {
    "name": "Medical Care",
    "children": [
-    {"name": "AggregateExpression", "size": 1616},
-    {"name": "And", "size": 1027},
-    {"name": "Arithmetic", "size": 3891},
-    {"name": "Average", "size": 891},
-    {"name": "BinaryExpression", "size": 2893},
-    {"name": "Comparison", "size": 5103},
-    {"name": "CompositeExpression", "size": 3677},
-    {"name": "Count", "size": 781},
-    {"name": "DateUtil", "size": 4141},
-    {"name": "Distinct", "size": 933},
-    {"name": "Expression", "size": 5130},
-    {"name": "ExpressionIterator", "size": 3617},
-    {"name": "Fn", "size": 3240},
-    {"name": "If", "size": 2732},
-    {"name": "IsA", "size": 2039},
-    {"name": "Literal", "size": 1214},
-    {"name": "Match", "size": 3748},
-    {"name": "Maximum", "size": 843},
     {
-     "name": "methods",
-     "children": [
-      {"name": "add", "size": 593},
-      {"name": "and", "size": 330},
-      {"name": "average", "size": 287},
-      {"name": "count", "size": 277},
-      {"name": "distinct", "size": 292},
-      {"name": "div", "size": 595},
-      {"name": "eq", "size": 594},
-      {"name": "fn", "size": 460},
-      {"name": "gt", "size": 603},
-      {"name": "gte", "size": 625},
-      {"name": "iff", "size": 748},
-      {"name": "isa", "size": 461},
-      {"name": "lt", "size": 597},
-      {"name": "lte", "size": 619},
-      {"name": "max", "size": 283},
-      {"name": "min", "size": 283},
-      {"name": "mod", "size": 591},
-      {"name": "mul", "size": 603},
-      {"name": "neq", "size": 599},
-      {"name": "not", "size": 386},
-      {"name": "or", "size": 323},
-      {"name": "orderby", "size": 307},
-      {"name": "range", "size": 772},
-      {"name": "select", "size": 296},
-      {"name": "stddev", "size": 363},
-      {"name": "sub", "size": 600},
-      {"name": "sum", "size": 280},
-      {"name": "update", "size": 307},
-      {"name": "variance", "size": 335},
-      {"name": "where", "size": 299},
-      {"name": "xor", "size": 354},
-      {"name": "_", "size": 264}
-     ]
-    },
-    {"name": "Minimum", "size": 843},
-    {"name": "Not", "size": 1554},
-    {"name": "Or", "size": 970},
-    {"name": "Query", "size": 13896},
-    {"name": "Range", "size": 1594},
-    {"name": "StringUtil", "size": 4130},
-    {"name": "Sum", "size": 791},
-    {"name": "Variable", "size": 1124},
-    {"name": "Variance", "size": 1876},
-    {"name": "Xor", "size": 1101}
+			"name": "Health literacy",
+			"children": [
+				{
+					"name": " ",
+					"children": [
+						{"name": "Rapid Estimate of Adult Literacy in Medicine (REALM)"}
+					]
+				}
+			]
+		},
+    {
+			"name": "Quality of healthcare",
+			"children": [
+				{"name": "Provider cultural competency"},
+				{"name": "Provider linguistic competency"}
+			]
+		},
+    {
+			"name": "Access to healthcare",
+			"children": [
+				{"name": "Quality of insurance"},
+				{
+					"name": "Vaccines and immunizations",
+					"children": [
+						{"name": "Vaccine registries"}
+					]
+				},
+				{"name": "Provider availability"},
+				{"name": "Distance to resources"}
+			]
+		},
+    {
+			"name": "Patient engagement",
+			"children": [
+				{
+					"name": " ",
+					"children": [
+						{"name": "Patient Activation Measure (PAM survey)"}
+					]
+				}
+			]
+		}
    ]
   },
   {
    "name": "Physical Environment",
    "children": [
-    {"name": "Arrays", "size": 8258},
-    {"name": "Colors", "size": 10001},
-    {"name": "Dates", "size": 8217},
-    {"name": "Displays", "size": 12555},
-    {"name": "Filter", "size": 2324},
-    {"name": "Geometry", "size": 10993},
     {
-     "name": "heap",
-     "children": [
-      {"name": "FibonacciHeap", "size": 9354},
-      {"name": "HeapNode", "size": 1233}
-     ]
-    },
-    {"name": "IEvaluable", "size": 335},
-    {"name": "IPredicate", "size": 383},
-    {"name": "IValueProxy", "size": 874},
+			"name": "Pollution",
+			"children": [
+				{
+					"name": "Tobacco use exposure",
+					"children": [
+						{"name": "National Health Interview Survey (NHIS)"}
+					]
+				},
+				{
+					"name": "Air quality",
+					"children": [
+						{"name": "National Health Interview Survey (NHIS)"}
+					]
+				},
+				{"name": "Lead exposure levels"},
+				{"name": "Carcinogen exposure"},
+				{"name": "Water quality"}
+			]
+		},
+    {"name": "Allergens", "size": 10001},
+    {"name": "Exposure to firearms", "size": 8217},
     {
-     "name": "math",
-     "children": [
-      {"name": "DenseMatrix", "size": 3165},
-      {"name": "IMatrix", "size": 2815},
-      {"name": "SparseMatrix", "size": 3366}
-     ]
-    },
-    {"name": "Maths", "size": 17705},
-    {"name": "Orientation", "size": 1486},
-    {
-     "name": "palette",
-     "children": [
-      {"name": "ColorPalette", "size": 6367},
-      {"name": "Palette", "size": 1229},
-      {"name": "ShapePalette", "size": 2059},
-      {"name": "SizePalette", "size": 2291}
-     ]
-    },
-    {"name": "Property", "size": 5559},
-    {"name": "Shapes", "size": 19118},
-    {"name": "Sort", "size": 6887},
-    {"name": "Stats", "size": 6557},
-    {"name": "Strings", "size": 22026}
+			"name": "Location",
+			"children": [
+				{"name": "Residence quality"},
+				{"name": "Walkability"},
+				{"name": "Recreational activity access"},
+				{"name": "Access to vocational training"},
+				{"name": "Educational opportunities"},
+				{"name": "Public space quality"},
+				{"name": "Job opportunities"},
+				{
+					"name": "Crowding conditions",
+					"children": [
+						{"name": "American Community Survey (ACS)"}
+					]
+				},
+				{
+					"name": "Transportation quality",
+					"children": [
+						{"name": "American Community Survey (ACS)"}
+					]
+				},
+				{
+					"name": "Crime level",
+					"children": [
+						{"name": "US census"}
+					]
+				},
+				{
+					"name": "Access to healthy foods",
+					"children": [
+						{"name": "Geocoded residential address"}
+					]
+				}
+			]
+		}
    ]
   }
  ]
