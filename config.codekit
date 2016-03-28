@@ -55,7 +55,7 @@
 		},
 	"\/js\/min\/interaction-min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/interaction-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/interaction-min-min.js",

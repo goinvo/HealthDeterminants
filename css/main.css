@@ -80,8 +80,13 @@ h1 {
 .references a {
     color: #324E77;
 }
-.references li {
+.word-break {
     word-break: break-all;
+}
+@media (max-width: 768px) {
+   .references .col-sm-6:first-child {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
