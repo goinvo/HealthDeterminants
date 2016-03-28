@@ -1,0 +1,1 @@
+$(document).ready(function(){$.getJSON("health-determinants.json",function(n){console.log(n)})});

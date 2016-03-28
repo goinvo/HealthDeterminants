@@ -1,24 +1,125 @@
 /*node style*/
 .node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
 }
 
 .node {
-  font: 10px sans-serif;
+    font: 10px sans-serif;
 }
 
 .link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+@media (max-width: 768px) {
+    #svg {
+        display: none;
+    } 
+    #mobile-metrix {
+        display: block;
+    }   
+}
+@media (min-width: 769px) {
+    #svg {
+        display: block;
+    } 
+    #mobile-metrix {
+        display: none;
+    }     
 }
 
-/*metrics list style*/
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+li {
+    margin-bottom: 10px;
+}
+
+body {
+    padding-top: 60px;
+}
+
+p, a, li {
+    font-size: 16px;
+}
+
 #metricsList {
-	columns: 4;
-	-webkit-columns: 4;
-	-moz-columns: 4;
-	list-style-type: none;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+}
+
+h1 {
+    color: #324E77;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 0 15px;
+    }    
+}
+@media (min-width: 769px) {
+    .section-padding {
+        padding: 0 45px;
+    }    
+}
+
+.row {
+    margin: 0;
+}
+
+.references .col-sm-6:first-child {
+    padding-left: 0;
+}
+.references a {
+    color: #324E77;
+}
+.references li {
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+   .references .col-sm-6:first-child {
+        padding-right: 0;
+    }
+}
+@media (min-width: 769px) {
+   .references .col-sm-6:first-child {
+        padding-right: 30px;
+    }
+}
+.references .col-sm-6:last-child {
+    padding-right: 0;
+}
+@media (max-width: 768px) {
+   .references .col-sm-6:last-child {
+        padding-left: 0;
+    }
+}
+@media (min-width: 769px) {
+   .references .col-sm-6:last-child {
+        padding-left: 30px;
+    }
+}
+
+.nav li {
+    margin-bottom: 0;
+}
+.navbar .container {
+    margin: 0;
+    padding: 0 30px;
+    width: 100%;
+    box-shadow: 0px 3px 8px rgba(0,0,0,.1);
+}
+@media (max-width: 768px) {
+    .nav li {
+        width: auto;
+        display: inline-block;
+    }
 }

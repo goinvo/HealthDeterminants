@@ -1,6 +1,7 @@
 //pie chart visualization d3
 
 var diameter = 1360;
+var padding = 180;
 
 var tree = d3.layout.tree()
     .size([360, diameter / 2 - 120])
@@ -9,11 +10,11 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal.radial()
     .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
 
-var svg = d3.select("body").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
-  .append("g")
-    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+var svg = d3.select("#svg").append("svg")
+    .attr("width", diameter + padding*2)
+    .attr("height", diameter + padding*2)
+    .append("g")
+    .attr("transform", "translate(" + ( diameter / 2 + padding ) + "," + ( diameter / 2 + padding ) + ")");
 
 d3.json("health-determinants.json", function(error, root) {
   if (error) throw error;
@@ -41,28 +42,8 @@ d3.json("health-determinants.json", function(error, root) {
       .attr("dy", ".31em")
       .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
       .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
-      .text(function(d) { return d.name; })
-			 .on("click",function(d){   //click a node to make all li metrics bold
-			 	$("#metricsList li").css({
-			 		"font-weight":"bolder"
-				});
-			});
-			d3.select()
-
-			// .on("click",function(d) {
-			// 	$(d3.select(this)).css({
-			// 		"font-weight":"bolder"
-			// 	});
-			// });
-
-			// $("").click({
-			// 	d3.select()....
-			// })
-
-			// d3.selectAll(".node").selectAll("text")
-			// 	.attr("font-weight","bolder");
+      .text(function(d) { return d.name; });
 
 
 });
 
-d3.select(self.frameElement).style("height", diameter - 150 + "px");

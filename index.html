@@ -4,61 +4,122 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Healthcare Determinants</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-	<h1>Health Determinants</h1>
-	<p>Health data interoperability is a necessity that will affect medical workflows,
-		patient outcomes, and the relationship between patients and their providers.
-This is a model of health determinants that have a high correlation with health
-outcomes for an individual, the metrics that go into quantifiably measuring those
-determinants, and the principles that should guide how that health data should be
-responsibly used. </p>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	    	<ul class="nav navbar-nav">
+		    	<li><a href="https://github.com/goinvo/HealthDeterminants/blob/master/posters/Health_determinants_system_concept.pdf">Poster</a></li>
+		    	<li><a href="https://github.com/goinvo/HealthDeterminants">Github</a></li>
+		    	<li><a href="mailto:info@goinvo.com">Feedback</a></li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<h1 class="section-padding">Healthcare Determinants</h1>
+	<p class="section-padding">Health data interoperability is a necessity that will affect medical workflows,patient outcomes, and the relationship between patients and their providers. This is a model of health determinants that have a high correlation with health outcomes for an individual, the metrics that go into quantifiably measuring those determinants, and the principles that should guide how that health data should be responsibly used. </p>
+	<div id="svg"></div>
+	<div id="mobile-metrix">
+	</div>
+
+
+
+	<!-- <h1 class="section-padding">Health Data Metrics</h1>
+	<ul id="metricsList" class="section-padding">
+		<li id="1">Big Five Inventory(BFI)</li>
+		<li id="2">NIH Toolbox Self-Efficacy Survey</li>
+		<li>Life Orientation Test-Revised (LOT-R)</li>
+		<li>Behavioral Risk Factor Surveillance System questionnaire (BRFSS)</li>
+		<li>Generalized Anxiety Disorder Scale (GAD-7)</li>
+		<li>Patient Reported Outcome Measurement Information System (PROMIS) T-score</li>
+		<li>Patient health Questionnaire (PHQ-9)</li>
+		<li>Center for Epidemiologic Studies Depression Scale (CESD-R)</li>
+		<li>Alcohol Use Disorders Identification Test (AUDIT-C)</li>
+		<li>National Health Interview Survey (NHIS)</li>
+		<li>Exercise Vital Signs</li>
+		<li>Metabolic Equivalent of Task (MET minutes)</li>
+		<li>Adverse Childhood Experiences (ACE) score</li>
+		<li>Intimate Partner Violence: HARK questionnaire</li>
+		<li>National Health and Nutrition Examination Survey (NHANES III)</li>
+		<li>MacArthur SES indicator</li>
+		<li>US census</li>
+		<li>American Community Survey (ACS)</li>
+		<li>Cardiorespiratory fitness test</li>
+		<li>Strength testing</li>
+		<li>Motor system testing</li>
+		<li>Sensory system testing</li>
+		<li>Serum protein testing</li>
+		<li>Sphygmomanometry</li>
+		<li>DXA scan</li>
+		<li>Waist-hip ratio</li>
+		<li>Weight</li>
+		<li>Height</li>
+		<li>Genetic test</li>
+		<li>Rapid Estimate of Adult Literacy in Medicine (REALM)</li>
+		<li>Vaccine registries</li>
+		<li>Patient Activation Measure (PAM survey)</li>
+		<li>Geocoded residential address</li>
+	</ul> -->
+
+	<div class="container-fluid references section-padding">
+		<div class="row">
+			<div class="col-sm-6">
+				<h1>Methodology</h1>
+				<ul>
+					<li>A list of determinants were collected from several health organizations [1 - 8]. These were used to create a combined list of determinants. The following categories of health determinants were chosen due to their consistency across most organizations [1, 2, 4, 5, 6, 7, 8]: genetics, medical care, social circumstances, environment, behavior. Research describing the relative contribution of each category was found. The relative contribution to ones health was determined by averaging the weights found from each primary source referenced here [9 - 13]. </li>
+					<li>The final weights for each category were based on the following sources: </li>
+					<li>DHHS[9]: Behavior 50%, genetics 20%, environment 20%, medical care 10%</li>
+					<li>JAMA[10]: Behavior 38%, environment 7%</li>
+					<li>Health Affairs[11]: Behavior 40%, genetics 30%, social 15%, environment 5%, medical care 10%</li>
+					<li>JAMA[12]: Behavior 39%, environment 5.4%</li>
+					<li>PLoS Medicine[13]: Behavior 36%</li>
+					<li>WHO[14]: Behavior 45%, environment 3%</li>
+					<li>U. Wisconsin[15]: Behavior 30%, social 40%, environment 10%, medical care 20%</li>
+					<li>Each determinant category was averaged based on the values from each source:</li>
+					<li>Behavior: (50 + 38 + 40 + 39 + 36 + 45 + 30) / 6 = 46.33<br/>Social: (15 + 40) / 2 = 27.5<br/>Genetics: (20 + 30) / 2 = 25<br/>Environment: (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4<br/>Medical care: (10 + 10 + 20) / 3 = 13.33</li>
+					<li>The ratio for each determinant was found based on the total of the averages:</li>
+					<li>Behavior = 46.33 / 120.56 = 38.43%<br/>Social = 27.5 / 120.56 = 22.81%<br/>Genetics = 25 / 120.56 = 20.74%<br/>Environment = 8.4 / 120.56 = 7%<br/>Medical care = 13.33 / 120.56 = 11.06%<br/>38.43 + 22.81 + 20.74 + 7 + 11.06 = 100.4%</li>
+					<li>Final determinant %’s were rounded to whole numbers:</li>
+					<li>38 (behavior) + 23 (social) + 21 (genetics) + 7 (environment) + 11 (medical care) = 100%</li>
+					<li>Final percentages:<br/>Behavior: 38%<br/>Social: 23%<br/>Genetics: 21%<br/>Medical care: 11%<br/>Environment: 7%</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<h1>References</h1>
+				<ul>
+					<li>1. <a href="http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html" target="_blank">NCHHSTP Social Determinants of Health</a>. (2014). Retrieved March 14, 2016, from http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html</li>
+					<li>2. <a href="http://www.who.int/hia/evidence/doh/en/" target="_blank">The determinants of health</a>. (n.d.). Retrieved March 14, 2016, from </li>
+					<li>3. <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health" target="_blank">Social Determinants of Health</a>. (n.d.). Retrieved March 14, 2016, from https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health</li>
+					<li>4. <a href="http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/" target="_blank">Beyond Health Care: The Role of Social Determinants in Promoting Health and Health Equity</a>. (n.d.). Retrieved March 14, 2016, from http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/</li>
+					<li>5. Schroeder, S. A. (2007). We Can Do Better — Improving the Health of the American People. New England Journal of Medicine N Engl J Med,357(12), 1221-1228.</li>
+					<li>6. <a href="http://healthaffairs" target="_blank">The Relative Contribution of Multiple Determinants to Health Outcomes</a>. (n.d.). Retrieved March 14, 2016, from http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf</li>
+					<li>7. Capturing social and behavioral domains and measures in electronic health records: Phase 2. (2014). Washington D.C.: The National Academies Press.</li>
+					<li>8. Gruszin, S., & Jorm, L. (2010, December). <a href="http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf" target="_blank">Public Health Classifications Project (Rep.)</a>. Retrieved March 15, 2016, from New South Wales Department of Health website: http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf</li>
+					<li>9. DHHS, Public Health Service. “Ten Leading Causes of Death in the United States.” Atlanta (GA): Bureau of State Services, July 1980</li>
+					<li>Each determinant category was averaged based on the values from each source:</li>
+					<li>10. J.M.McGinnis and W.H.Foege. “Actual Causes of Death in the United States.” JAMA 270, No. 18 (1993):2207-12</li>
+					<li>11. J.M.McGinnis et al, “The Case for More Active Policy Attention to Health Promotion.” Health Affairs 21, no.2 (2002):78-93</li>
+					<li>12. A.Mokdad et al. “Actual Causes of Death in the United States 2000.” JAMA 291, no.10 (2004):1238-45</li>
+					<li>13. G.Danaei et al, “The Preventable Cuases of Death in the United States: Comparative Risk Assessment of Dietary, Lifestyle, and Metabolic Risk Factors.” PLoS Medicine 6, no. 4 (2009):e1000058</li>
+					<li>14. World Health Organization, Global Health Risks: Mortality and Burden of Disease Attributable to Selected Major Risks, Geneva: WHO, 2009</li>
+					<li>15. B. Booske et al., “Different Perspectives for Assigning Weights to Determinants of Health.” County Health Rankings Working Paper. Madison (WI): University of Wisconsin Population Health Institute, 2010</li>
+					<li>16. Schneiderman, N., Ironson, G., & Siegel, S. D. (2005). <a href="http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy" target="_blank">STRESS AND HEALTH: Psychological, Behavioral, and Biological Determinants</a>. Annual Review of Clinical Psychology, 1, 607-628. Retrieved March 16, 2016, from http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- pie chart visualization d3 -->
 <script src = "js/d3.js"></script>
+<script src = "js/mobile_metrix.js"></script>
 
-
-<h1>health data metrics</h1>
-<ul id="metricsList">
-	<li id="1">Big Five Inventory(BFI)</li>
-	<li id="2">NIH Toolbox Self-Efficacy Survey</li>
-	<li>Life Orientation Test-Revised (LOT-R)</li>
-	<li>Behavioral Risk Factor Surveillance System questionnaire (BRFSS)</li>
-	<li>Generalized Anxiety Disorder Scale (GAD-7)</li>
-	<li>Patient Reported Outcome Measurement Information System (PROMIS) T-score</li>
-	<li>Patient health Questionnaire (PHQ-9)</li>
-	<li>Center for Epidemiologic Studies Depression Scale (CESD-R)</li>
-	<li>Alcohol Use Disorders Identification Test (AUDIT-C)</li>
-	<li>National Health Interview Survey (NHIS)</li>
-	<li>Exercise Vital Signs</li>
-	<li>Metabolic Equivalent of Task (MET minutes)</li>
-	<li>Adverse Childhood Experiences (ACE) score</li>
-	<li>Intimate Partner Violence: HARK questionnaire</li>
-	<li>National Health and Nutrition Examination Survey (NHANES III)</li>
-	<li>MacArthur SES indicator</li>
-	<li>US census</li>
-	<li>American Community Survey (ACS)</li>
-	<li>Cardiorespiratory fitness test</li>
-	<li>Strength testing</li>
-	<li>Motor system testing</li>
-	<li>Sensory system testing</li>
-	<li>Serum protein testing</li>
-	<li>Sphygmomanometry</li>
-	<li>DXA scan</li>
-	<li>Waist-hip ratio</li>
-	<li>Weight</li>
-	<li>Height</li>
-	<li>Genetic test</li>
-	<li>Rapid Estimate of Adult Literacy in Medicine (REALM)</li>
-	<li>Vaccine registries</li>
-	<li>Patient Activation Measure (PAM survey)</li>
-	<li>Geocoded residential address</li>
-</ul>
-
-<script src = "js/interaction.js"></script>
 </body>
