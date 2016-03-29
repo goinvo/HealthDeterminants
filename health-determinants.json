@@ -2,31 +2,31 @@
  "name": "Patient",
  "children": [
   {
-   "name": "Individual Behavior",
-   "children": [
+	"name": "Individual Behavior",
+	"children": [
     {
      "name": "Psychological assets",
      "children": [
       {
         "name": "Conscientiousness level",
         "children": [
-          {"name": "Big Five Inventory (BIF)", "size": 3938}
+          {"name": "Big Five Inventory (BIF)", "size": 3938, "children":[]}
         ]
       },
       {
         "name": "Self efficacy",
         "children": [
-          {"name": "NIH Toolbox Self-Efficacy Survey", "size": 3812}
+          {"name": "NIH Toolbox Self-Efficacy Survey", "size": 3812, "children":[]}
         ]
       },
       {
         "name": "Optimism level",
         "children": [
-          {"name": "Life Orientation Test-Revised (LOT-R)", "size": 3812}
+          {"name": "Life Orientation Test-Revised (LOT-R)", "size": 3812, "children":[]}
         ]
       },
-      {"name": "Life satisfaction level", "size": 743},
-      {"name": "Cognitive function late in life", "size": 743}
+      {"name": "Life satisfaction level", "size": 743, "children":[]},
+      {"name": "Cognitive function late in life", "size": 743, "children":[]}
      ]
     },
     {
@@ -35,23 +35,23 @@
       {
         "name": "Stress level",
         "children": [
-          {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "size": 3534}
+          {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "size": 3534, "children":[]}
         ]
       },
-      { "name": "Hopelessness level" },
+      { "name": "Hopelessness level" , "children":[]},
       {
         "name": "Anxiety level",
         "children": [
-          {"name": "Generalized Axiety Disorder Scale (GAD-7)", "size": 3534},
-          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534}
+          {"name": "Generalized Axiety Disorder Scale (GAD-7)", "size": 3534, "children":[]},
+          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534, "children":[]}
         ]
       },
       {
         "name": "Depression level",
         "children": [
-          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534},
-          {"name": "Patient Health Questionnaire (PHQ-9)", "size": 3534},
-          {"name": "Center for Epidemiologic Studies Depression Scale (CESD-R)", "size": 3534}
+          {"name": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score", "size": 3534, "children":[]},
+          {"name": "Patient Health Questionnaire (PHQ-9)", "size": 3534, "children":[]},
+          {"name": "Center for Epidemiologic Studies Depression Scale (CESD-R)", "size": 3534, "children":[]}
         ]
       }
      ]
@@ -62,23 +62,23 @@
       {
         "name": "Alcohol use habits",
         "children": [
-          {"name": "Alcohol Use Disorders Identification Test (AUDIT-C)", "size": 3534}
+          {"name": "Alcohol Use Disorders Identification Test (AUDIT-C)", "size": 3534, "children":[]}
         ]
       },
       {
         "name": "Tobacco use habits",
         "children": [
-          {"name": "National Health Interview Survey (NHIS)", "size": 3534}
+          {"name": "National Health Interview Survey (NHIS)", "size": 3534, "children":[]}
         ]
       },
-      { "name": "Other substance habits" }
+      { "name": "Other substance habits", "children":[] }
      ]
     },
     {
-     "name": "Sleep patterns"
+     "name": "Sleep patterns", "children":[]
     },
     {
-     "name": "Diet patterns"
+     "name": "Diet patterns", "children":[]
     },
     {
      "name": "Physical activity",
@@ -86,13 +86,13 @@
       {
         "name": " ",
         "children": [
-          {"name": "Exercise vital signs", "size": 7074}
+          {"name": "Exercise vital signs", "size": 7074, "children":[]}
         ]
       },
       {
         "name": " ",
         "children": [
-          {"name": "Metabolic Equivalent of Task (MET minutes)", "size": 7074}
+          {"name": "Metabolic Equivalent of Task (MET minutes)", "size": 7074, "children":[]}
         ]
       }
      ]
@@ -100,11 +100,11 @@
     {
      "name": "Other risk related behaviors",
      "children": [
-      {"name": "Gun behavior", "size": 7074},
-      {"name": "Sexual activity", "size": 7074},
+      {"name": "Gun behavior", "size": 7074, "children":[]},
+      {"name": "Sexual activity", "size": 7074, "children":[]},
       {"name": "Motor vehicle behavior",
         "children": [
-          {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "size": 7074}
+          {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "size": 7074, "children":[]}
         ]
       }
      ]
@@ -114,14 +114,14 @@
   {
    "name": "Social Circumstances",
    "children": [
-    {"name": "Gender identity", "size": 1983},
+    {"name": "Gender identity", "size": 1983, "children":[]},
     {
       "name": "Military service",
       "children": [
         {
           "name": " ",
           "children": [
-            {"name": "American Community Survey (ACS)", "size": 1983}
+            {"name": "American Community Survey (ACS)", "size": 1983, "children":[]}
           ]
         }
       ]
@@ -132,7 +132,7 @@
       {
         "name": " ",
         "children": [
-          {"name": "National Health Interview Survey (NHIS)", "size": 5842}
+          {"name": "National Health Interview Survey (NHIS)", "size": 5842, "children":[]}
         ]
       }
      ]
@@ -143,7 +143,7 @@
       {
         "name": " ",
         "children": [
-          {"name": "US census", "size": 5842}
+          {"name": "US census", "size": 5842, "children":[]}
         ]
       }
      ]
@@ -154,38 +154,38 @@
 				{
 					"name": "Occupation",
 					"children": [
-						{"name": "US census", "size": 5842}
+						{"name": "US census", "size": 5842, "children":[]}
 					]
 				},
 				{
 					"name": "Education level",
 					"children": [
-						{"name": "US census", "size": 5842}
+						{"name": "US census", "size": 5842, "children":[]}
 					]
 				},
-				{"name": "Language and literacy level"},
-				{"name": "Family income level"},
+				{"name": "Language and literacy level", "children":[]},
+				{"name": "Family income level", "children":[]},
 				{
 					"name": "Individual income level",
 					"children": [
-						{"name": "US census", "size": 5842}
+						{"name": "US census", "size": 5842, "children":[]}
 					]
 				},
 				{
 					"name": "Subjective social status",
 					"children": [
-						{"name": "MacArthur SES indicator", "size": 5842}
+						{"name": "MacArthur SES indicator", "size": 5842, "children":[]}
 					]
 				}
 			]
 		},
-    {"name": "History of incarceration", "size": 5842},
+    {"name": "History of incarceration", "size": 5842, "children":[]},
     {
 			"name": "Culture and tradition",
 			"children": [
-				{"name": "Religious involvement"},
-				{"name": "Community cultural norms"},
-				{"name": "Family cultural norms"}
+				{"name": "Religious involvement", "children":[]},
+				{"name": "Community cultural norms", "children":[]},
+				{"name": "Family cultural norms", "children":[]}
 			]
 		},
     {
@@ -194,28 +194,28 @@
 				{
 					"name": "Quality of community support",
 					"children": [
-						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842, "children":[]}
 					]
 				},
 				{
 					"name": "Quality of friends support",
 					"children": [
-						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842, "children":[]}
 					]
 				},
 				{
 					"name": "Quality of family support",
 					"children": [
-						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842}
+						{"name": "National Health and Nutrition Examination Survey (NHANES III)", "size": 5842, "children":[]}
 					]
 				},
 				{
 					"name": "Intimate relationships",
 					"children": [
-						{"name": "Intimate Partner Violence: HARK questionnaire", "size": 5842}
+						{"name": "Intimate Partner Violence: HARK questionnaire", "size": 5842, "children":[]}
 					]
 				},
-				{"name": "Civic participation"}
+				{"name": "Civic participation", "children":[]}
 			]
 		},
     {
@@ -223,13 +223,13 @@
 			"children": [
 				{"name": " ",
 					"children": [
-						{"name": "Adverse Childhood Experiences (ACE) score", "size": 5842}
+						{"name": "Adverse Childhood Experiences (ACE) score", "size": 5842, "children":[]}
 					]
 				}
 			]
 		},
-    {"name": "Discrimination", "size": 5842},
-    {"name": "Work conditions", "size": 5842}
+    {"name": "Discrimination", "size": 5842, "children":[]},
+    {"name": "Work conditions", "size": 5842, "children":[]}
    ]
   },
   {
@@ -241,37 +241,37 @@
       {
 				"name": "Single-gene",
 				"children": [
-					{"name": "Genetic test", "size": 5842}
+					{"name": "Genetic test", "size": 5842, "children":[]}
 				]
 			},
 			{
 				"name": "Chromosomal",
 				"children": [
-					{"name": "Genetic test", "size": 5842}
+					{"name": "Genetic test", "size": 5842, "children":[]}
 				]
 			},
 			{
 				"name": "Multifactorial",
 				"children": [
-					{"name": "Genetic test", "size": 5842}
+					{"name": "Genetic test", "size": 5842, "children":[]}
 				]
 			},
 			{
 				"name": "Mitochondrial DNA-linked",
 				"children": [
-					{"name": "Genetic test", "size": 5842}
+					{"name": "Genetic test", "size": 5842, "children":[]}
 				]
 			},
 			{
 				"name": "Gender",
 				"children": [
-					{"name": "US census", "size": 5842}
+					{"name": "US census", "size": 5842, "children":[]}
 				]
 			},
 			{
 				"name": "Race and ethnicity",
 				"children": [
-					{"name": "US census", "size": 5842}
+					{"name": "US census", "size": 5842, "children":[]}
 				]
 			}
      ]
@@ -282,25 +282,25 @@
 		  {
 				"name": "Age",
 				"children": [
-					{"name": "US census", "size": 5842}
+					{"name": "US census", "size": 5842, "children":[]}
 				]
 			},
       {
 				"name": " ",
 				"children": [
-					{"name": "Height"}
+					{"name": "Height", "children":[]}
 				]
 			},
 			{
 				"name": " ",
 				"children": [
-					{"name": "Weight"}
+					{"name": "Weight", "children":[]}
 				]
 			},
 			{
 				"name": " ",
 				"children": [
-					{"name": "Waist-hip ratio"}
+					{"name": "Waist-hip ratio", "children":[]}
 				]
 			}
      ]
@@ -311,38 +311,38 @@
 			{
 				"name": "Bone density",
 				"children": [
-					{"name": "DXA scan"}
+					{"name": "DXA scan", "children":[]}
 				]
 			},
 			{
 				"name": "Blood pressure",
 				"children": [
-					{"name": "Sphygmomanometry"}
+					{"name": "Sphygmomanometry", "children":[]}
 				]
 			},
-			{"name": "Biochemical function"},
+			{"name": "Biochemical function", "children":[]},
 			{
 				"name": "Sensory function",
 				"children": [
-					{"name": "Sensory system testing"}
+					{"name": "Sensory system testing", "children":[]}
 				]
 			},
 			{
 				"name": "Movement and balance",
 				"children": [
-					{"name": "Motor system testing"}
+					{"name": "Motor system testing", "children":[]}
 				]
 			},
 			{
 				"name": "Strength and robustness",
 				"children": [
-					{"name": "Strength testing"}
+					{"name": "Strength testing", "children":[]}
 				]
 			},
 			{
 				"name": "Fitness",
 				"children": [
-					{"name": "Cardiorespiratory fitness test"}
+					{"name": "Cardiorespiratory fitness test", "children":[]}
 				]
 			}
 		 ]
@@ -358,7 +358,7 @@
 				{
 					"name": " ",
 					"children": [
-						{"name": "Rapid Estimate of Adult Literacy in Medicine (REALM)"}
+						{"name": "Rapid Estimate of Adult Literacy in Medicine (REALM)", "children":[]}
 					]
 				}
 			]
@@ -366,22 +366,22 @@
     {
 			"name": "Quality of healthcare",
 			"children": [
-				{"name": "Provider cultural competency"},
-				{"name": "Provider linguistic competency"}
+				{"name": "Provider cultural competency", "children":[]},
+				{"name": "Provider linguistic competency", "children":[]}
 			]
 		},
     {
 			"name": "Access to healthcare",
 			"children": [
-				{"name": "Quality of insurance"},
+				{"name": "Quality of insurance", "children":[]},
 				{
 					"name": "Vaccines and immunizations",
 					"children": [
-						{"name": "Vaccine registries"}
+						{"name": "Vaccine registries", "children":[]}
 					]
 				},
-				{"name": "Provider availability"},
-				{"name": "Distance to resources"}
+				{"name": "Provider availability", "children":[]},
+				{"name": "Distance to resources", "children":[]}
 			]
 		},
     {
@@ -390,7 +390,7 @@
 				{
 					"name": " ",
 					"children": [
-						{"name": "Patient Activation Measure (PAM survey)"}
+						{"name": "Patient Activation Measure (PAM survey)", "children":[]}
 					]
 				}
 			]
@@ -406,54 +406,54 @@
 				{
 					"name": "Tobacco use exposure",
 					"children": [
-						{"name": "National Health Interview Survey (NHIS)"}
+						{"name": "National Health Interview Survey (NHIS)", "children":[]}
 					]
 				},
 				{
 					"name": "Air quality",
 					"children": [
-						{"name": "National Health Interview Survey (NHIS)"}
+						{"name": "National Health Interview Survey (NHIS)", "children":[]}
 					]
 				},
-				{"name": "Lead exposure levels"},
-				{"name": "Carcinogen exposure"},
-				{"name": "Water quality"}
+				{"name": "Lead exposure levels", "children":[]},
+				{"name": "Carcinogen exposure", "children":[]},
+				{"name": "Water quality", "children":[]}
 			]
 		},
-    {"name": "Allergens", "size": 10001},
-    {"name": "Exposure to firearms", "size": 8217},
+    {"name": "Allergens", "size": 10001, "children":[]},
+    {"name": "Exposure to firearms", "size": 8217, "children":[]},
     {
 			"name": "Location",
 			"children": [
-				{"name": "Residence quality"},
-				{"name": "Walkability"},
-				{"name": "Recreational activity access"},
-				{"name": "Access to vocational training"},
-				{"name": "Educational opportunities"},
-				{"name": "Public space quality"},
-				{"name": "Job opportunities"},
+				{"name": "Residence quality", "children":[]},
+				{"name": "Walkability", "children":[]},
+				{"name": "Recreational activity access", "children":[]},
+				{"name": "Access to vocational training", "children":[]},
+				{"name": "Educational opportunities", "children":[]},
+				{"name": "Public space quality", "children":[]},
+				{"name": "Job opportunities", "children":[]},
 				{
 					"name": "Crowding conditions",
 					"children": [
-						{"name": "American Community Survey (ACS)"}
+						{"name": "American Community Survey (ACS)", "children":[]}
 					]
 				},
 				{
 					"name": "Transportation quality",
 					"children": [
-						{"name": "American Community Survey (ACS)"}
+						{"name": "American Community Survey (ACS)", "children":[]}
 					]
 				},
 				{
 					"name": "Crime level",
 					"children": [
-						{"name": "US census"}
+						{"name": "US census", "children":[]}
 					]
 				},
 				{
 					"name": "Access to healthy foods",
 					"children": [
-						{"name": "Geocoded residential address"}
+						{"name": "Geocoded residential address", "children":[]}
 					]
 				}
 			]
