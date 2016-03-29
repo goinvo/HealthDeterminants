@@ -138,21 +138,21 @@ h1 {
     top: 38px;
 }
 #mobile-metrix .glyphicon-chevron-left {
-    margin-left: 25px;
+    margin-left: 15px;
 }
 #mobile-metrix .glyphicon-chevron-right {
-    margin-right: 25px;
+    margin-right: 15px;
 }
 #mobile-metrix .item {
     padding: 15px;
 }
 #mobile-metrix .item .title {
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
+    margin: 0 -15px 20px;
     padding: 10px 0;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
 }
 #mobile-metrix .item ul.sub-list {
     list-style-type: circle;
