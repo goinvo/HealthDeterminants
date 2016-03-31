@@ -11,4 +11,7 @@ $(document).ready(function() {
 
 	    $("#mobile-matrix .item:first-child").addClass('active');
 	});
+
+	// core health table
+	$("#core-health-table tr:nth-child(n+21)").hide();
 });
