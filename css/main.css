@@ -18,7 +18,7 @@
     #svg {
         display: none;
     } 
-    #mobile-metrix {
+    #mobile-matrix {
         display: block;
     }   
 }
@@ -26,7 +26,7 @@
     #svg {
         display: block;
     } 
-    #mobile-metrix {
+    #mobile-matrix {
         display: none;
     }     
 }
@@ -41,8 +41,11 @@ body {
     padding-top: 60px;
 }
 
-p, a, li {
+/*p, a, li {
     font-size: 16px;
+}*/
+h1 {
+    font-size: 30px;
 }
 
 #metricsList {
@@ -126,27 +129,27 @@ h1 {
 }
 
 /**************************
-  mobile metrix carousel
+  mobile matrix carousel
 **************************/
-#mobile-metrix .carousel-control {
+#mobile-matrix .carousel-control {
     background-image: none;
     width: auto;
-    font-size: 16px;
+    //font-size: 16px;
 }
-#mobile-metrix .glyphicon {
+#mobile-matrix .glyphicon {
     color: #324E77;
     top: 38px;
 }
-#mobile-metrix .glyphicon-chevron-left {
+#mobile-matrix .glyphicon-chevron-left {
     margin-left: 15px;
 }
-#mobile-metrix .glyphicon-chevron-right {
+#mobile-matrix .glyphicon-chevron-right {
     margin-right: 15px;
 }
-#mobile-metrix .item {
+#mobile-matrix .item {
     padding: 15px;
 }
-#mobile-metrix .item .title {
+#mobile-matrix .item .title {
     text-align: center;
     margin: 0 -15px 20px;
     padding: 10px 0;
@@ -154,12 +157,51 @@ h1 {
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
-#mobile-metrix .item ul.sub-list {
+#mobile-matrix .item ul.sub-list {
     list-style-type: circle;
     margin-left: 18px;
 }
-#mobile-metrix .item ul.undersub-list {
+#mobile-matrix .item ul.undersub-list {
     list-style-type: square;
     margin-left: 18px;
 }
 
+/**************************
+  core health metrics table
+**************************/
+
+@media (max-width: 768px) {
+    .table {
+        margin: 200px 15px 50px 15px;
+        width: calc(100% - 30px);
+    }      
+}
+@media (min-width: 769px) {
+    .table {
+        margin: 200px 45px 50px 45px;
+        width: calc(100% - 90px);
+    }  
+}
+.table-bordered > tbody > tr > td {
+    height: 40px;
+}
+.table-bordered > tbody > tr > td:first-child {
+    width: 15%;
+}
+.table-header-wrap {
+    position: relative;
+}
+.table .selected {
+    background-color: #33BAC9;
+}
+.table-header {
+    width: 150px;
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+    transform-origin: left bottom;
+    transform: translate(10px, -60px) rotate(-60deg);
+    color: #324E77;
+    top: 0%;
+    left: 50%;
+}
