@@ -61,17 +61,26 @@ $(document).ready(function() {
 	    async: false,
 	    success: function (data) {
 	        coreLabels = data.split('\n');
+	        for(var i = 0; i < coreLabels.length; i++) {
+	        	coreLabels[i].replace(/"/g, ' ');
+	        	if(coreLabels[i].charAt(0)=='"') {
+	        		coreLabels[i] = coreLabels[i].substring(1, coreLabels[i].length - 1);
+	        	}
+	        	if(coreLabels[i].charAt(coreLabels[i].length - 1)=='"') {
+	        		coreLabels[i] = coreLabels[i].substring(0, coreLabels[i].length - 1);
+	        	}
+	        }
 	        //console.log(coreLabels);
 
 	        // call a function on complete 
 	        $('#core-health-matrix .input-group .typeahead').typeahead({
 			  hint: true,
-			  highlight: true,
-			  minLength: 1
+			  highlight: true
 			},
 			{
 			  name: 'corelabels',
 			  source: substringMatcher(coreLabels),
+			  limit: 10,
 			  templates: {
 			    empty: [
 			      '<div class="empty-message">unable to find any record that match the current query</div>'
