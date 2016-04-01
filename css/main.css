@@ -169,32 +169,23 @@ a {
 /**************************
   core health metrics table
 **************************/
-
-@media (max-width: 768px) {
-    .table {
-        margin: 200px 15px 50px 15px;
-        width: calc(100% - 30px);
-    }      
+#core-health-matrix .table {
+    margin-top: 200px;
+    margin-bottom: 0;
 }
-@media (min-width: 769px) {
-    .table {
-        margin: 200px 45px 50px 45px;
-        width: calc(100% - 90px);
-    }  
-}
-.table-bordered > tbody > tr > td {
+#core-health-matrix .table-bordered > tbody > tr > td {
     height: 40px;
 }
-.table-bordered > tbody > tr > td:first-child {
+#core-health-matrix .table-bordered > tbody > tr > td:first-child {
     width: 15%;
 }
-.table-header-wrap {
+#core-health-matrix .table-header-wrap {
     position: relative;
 }
-.table .selected {
+#core-health-matrix .table .selected {
     background-color: #33BAC9;
 }
-.table-header {
+#core-health-matrix .table-header {
     width: 150px;
     text-align: left;
     position: absolute;
@@ -204,4 +195,16 @@ a {
     color: #324E77;
     top: 0%;
     left: 50%;
+}
+#core-health-matrix #view-more-link {
+    padding: 10px 0 10px 8px;
+    border: 1px solid #dddddd;
+    border-top: none;
+    color: #324E77;
+}
+#core-health-matrix #view-more-link:hover {
+    cursor: pointer;
+}
+#core-health-matrix #view-more-link .glyphicon {
+    font-size: 12px;
 }
