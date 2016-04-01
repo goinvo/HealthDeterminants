@@ -106,40 +106,61 @@
 	<section class="section-padding" id="core-health-matrix">
 		<h1>Core Health Metrics Present Across Various Healthcare Organizations</h1>
 		<p>View all health metrics <a href="https://docs.google.com/spreadsheets/d/1q-Xq3ws20sC0qzZ62wKkYGTyM-RKrSOGnvScDhS6v7I/edit#gid=0" target="_blank">here</a>.</p>
+
+		<div class="input-group">
+	    	<input type="text" class="form-control typeahead" placeholder="Search for...">
+	   		<span class="input-group-btn">
+	    		<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+	    	</span>
+	    </div>
+
 		<table class="table table-bordered">
 			<tbody>
 				<tr>
-					<td>Medication list</td>
-					<td class="table-header-wrap selected">
+					<td></td>
+					<td class="table-header-wrap">
 						<span class="table-header">National Institutes of Health</span>
 					</td>
 					<td class="table-header-wrap">
 						<span class="table-header">National Committee for Quality Assurance</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">Group Health</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">National Committee on Vital and Health Statistics</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">Capital BlueCross</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">Kentucky Cabinet for Health and Family Services</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">College of Nursing and Health, Wright State University</span>
 					</td>
 					<td class="table-header-wrap">
 						<span class="table-header">National Academy of Sciences </span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">Corepoint Health</span>
 					</td>
-					<td class="table-header-wrap selected">
+					<td class="table-header-wrap">
 						<span class="table-header">CareFirst</span>
 					</td>
+				</tr>
+				<tr>
+					<td>Medication list</td>
+					<td class="selected"></td>
+					<td></td>
+					<td class="selected"></td>
+					<td class="selected"></td>
+					<td class="selected"></td>
+					<td class="selected"></td>
+					<td class="selected"></td>
+					<td></td>
+					<td class="selected"></td>
+					<td class="selected"></td>
 				</tr>
 				<tr>
 					<td>Allergy list</td>
@@ -2423,6 +2444,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 <!-- pie chart visualization d3 -->
 <script src = "js/d3.js"></script>
 <script src = "js/mobile_metrix.js"></script>

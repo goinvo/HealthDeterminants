@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('.carousel').carousel();
 
 	$.getJSON('health-determinants.json', function(data) {
-	    console.log(data)
+	    //console.log(data)
 	    var matrixTemplate = $('#matrixTemplate').html();
 	    var html = Mustache.render(matrixTemplate, data);
 	      $('#mobile-matrix .carousel-inner').html(html);
@@ -31,4 +31,57 @@ $(document).ready(function() {
 		});
 		
 	});
+
+	// typeahead
+	var substringMatcher = function(strs) {
+	  return function findMatches(q, cb) {
+	    var matches, substringRegex;
+
+	    // an array that will be populated with substring matches
+	    matches = [];
+
+	    // regex used to determine if a string contains the substring `q`
+	    substrRegex = new RegExp(q, 'i');
+
+	    // iterate through the pool of strings and for any string that
+	    // contains the substring `q`, add it to the `matches` array
+	    $.each(strs, function(i, str) {
+	      if (substrRegex.test(str)) {
+	        matches.push(str);
+	      }
+	    });
+
+	    cb(matches);
+	  };
+	};
+
+	var coreLabels;
+	$.ajax({
+	    url: "core.csv",
+	    async: false,
+	    success: function (data) {
+	        coreLabels = data.split('\n');
+	        //console.log(coreLabels);
+
+	        // call a function on complete 
+	        $('#core-health-matrix .input-group .typeahead').typeahead({
+			  hint: true,
+			  highlight: true,
+			  minLength: 1
+			},
+			{
+			  name: 'corelabels',
+			  source: substringMatcher(coreLabels),
+			  templates: {
+			    empty: [
+			      '<div class="empty-message">unable to find any record that match the current query</div>'
+			    ]
+			  }
+			});
+	    }
+	});
+
+	
+
+	
 });
