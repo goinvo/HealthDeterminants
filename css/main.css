@@ -53,7 +53,9 @@ h1 {
     -webkit-columns: 4;
     -moz-columns: 4;
 }
-
+.container-fluid {
+    padding: 0;
+}
 h1 {
     color: #324E77;
     font-weight: normal;
@@ -76,7 +78,7 @@ h1 {
 .references li {
     margin-bottom: 10px;
 }
-.references .col-sm-6:first-child {
+.col-sm-6:first-child {
     padding-left: 0;
 }
 a {
@@ -86,31 +88,31 @@ a {
     word-break: break-all;
 }
 @media (max-width: 768px) {
-   .references .col-sm-6:first-child {
+   .col-sm-6:first-child {
         padding-right: 0;
     }
 }
 
 @media (max-width: 768px) {
-   .references .col-sm-6:first-child {
+   .col-sm-6:first-child {
         padding-right: 0;
     }
 }
 @media (min-width: 769px) {
-   .references .col-sm-6:first-child {
+   .col-sm-6:first-child {
         padding-right: 30px;
     }
 }
-.references .col-sm-6:last-child {
+.col-sm-6:last-child {
     padding-right: 0;
 }
 @media (max-width: 768px) {
-   .references .col-sm-6:last-child {
+   .col-sm-6:last-child {
         padding-left: 0;
     }
 }
 @media (min-width: 769px) {
-   .references .col-sm-6:last-child {
+   .col-sm-6:last-child {
         padding-left: 30px;
     }
 }
@@ -215,34 +217,13 @@ a {
 #core-health-matrix #view-more-link .glyphicon {
     font-size: 12px;
 }
+#core-health-matrix .input-group .form-control {
+    border-radius: 4px;
+}
 #core-health-matrix .input-group .form-control:focus {
     border-color: #cccccc;
     box-shadow: none;
 }
-#core-health-matrix .input-group .btn:focus {
-    outline: none;
-}
-#core-health-matrix .input-group .twitter-typeahead {
+#core-health-matrix .input-group {
     width: 100%;
-    top: 2px;
-}
-#core-health-matrix .input-group .twitter-typeahead input {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-#core-health-matrix .input-group .twitter-typeahead .tt-menu {
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
-    border-top: none;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    width: 100%;
-}
-#core-health-matrix .input-group .twitter-typeahead .tt-menu .tt-suggestion,
-#core-health-matrix .input-group .twitter-typeahead .tt-menu .empty-message {
-    padding: 5px 10px;
-}
-#core-health-matrix .input-group .twitter-typeahead .tt-menu .tt-suggestion:hover {
-    cursor: pointer;
-    background-color: #f5f5f5;
 }
