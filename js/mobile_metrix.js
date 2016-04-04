@@ -23,10 +23,10 @@ $(document).ready(function() {
 		$("#view-more-link .glyphicon").toggleClass("glyphicon-menu-down glyphicon-menu-up");
 
 		if($("#view-more-link .glyphicon").hasClass('glyphicon-menu-up')) {
-			$("#view-more-content").text('view less rows ');
+			$("#view-more-content").text('View less metrics ');
 		}
 		else {
-			$("#view-more-content").text('view all metrics ');
+			$("#view-more-content").text('View all metrics ');
 		}
 		
 	});
@@ -37,6 +37,7 @@ $(document).ready(function() {
 	    // do something
 	    //console.log($(this).val())
 	    $("#view-more-link").hide();
+	    $("#core-health-matrix .input-group .glyphicon").show();
 	    if($(this).val().trim() != "") {
 	    	var count = 0;
 		    for(var i = 1; i < $("#core-health-matrix table tr").length; i++) {
@@ -72,6 +73,7 @@ $(document).ready(function() {
 				$("#core-health-matrix table tr:nth-child(n+21)").hide();
 	    		$("#view-more-link").show();
 			}
+			$("#core-health-matrix .input-group .glyphicon").hide();
 	    }
 
 	});
@@ -88,6 +90,7 @@ $(document).ready(function() {
 			$("#core-health-matrix table tr:nth-child(n+21)").hide();
     		$("#view-more-link").show();
 		}
+		$("#core-health-matrix .input-group .glyphicon").hide();
 	});
 	
 });

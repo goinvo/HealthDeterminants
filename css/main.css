@@ -247,6 +247,7 @@ a {
     z-index: 10;
     color: #cccccc;
     font-size: 16px;
+    display: none;
 }
 #core-health-matrix .input-group .glyphicon:hover {
     cursor: pointer;
