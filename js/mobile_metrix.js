@@ -31,65 +31,63 @@ $(document).ready(function() {
 		
 	});
 
-	// // typeahead
-	// var substringMatcher = function(strs) {
-	//   return function findMatches(q, cb) {
-	//     var matches, substringRegex;
 
-	//     // an array that will be populated with substring matches
-	//     matches = [];
+	// start typing
+	$('#core-health-matrix input').on('input', function() {
+	    // do something
+	    //console.log($(this).val())
+	    $("#view-more-link").hide();
+	    if($(this).val().trim() != "") {
+	    	var count = 0;
+		    for(var i = 1; i < $("#core-health-matrix table tr").length; i++) {
+		    	if( $("#core-health-matrix table tr:nth-child("+ ( i + 1 ) +") td:first-child").text().toLowerCase().indexOf($(this).val().toLowerCase()) != -1 )	 {
+		    		//console.log( $("#core-health-matrix table tr:nth-child("+ ( i + 1 ) +")  td:first-child").text() )
+		    		$("#core-health-matrix table tr:nth-child("+ ( i + 1 ) +")").show();
+		    	}
+		    	else {
+		    		//console.log("none")
+		    		$("#core-health-matrix table tr:nth-child("+ ( i + 1 ) +")").hide();
+		    		count ++;
+		    	}
+		    }
+		    if(count == $("#core-health-matrix table tr").length - 1) {
+		    	$("#core-health-matrix #no-data-text").show();
+		    }
+		    else {
+		    	$("#core-health-matrix #no-data-text").hide();
+		    }
+	    }
+	});
 
-	//     // regex used to determine if a string contains the substring `q`
-	//     substrRegex = new RegExp(q, 'i');
+	// select and clean input
+	$("#core-health-matrix input").keyup(function() {
 
-	//     // iterate through the pool of strings and for any string that
-	//     // contains the substring `q`, add it to the `matches` array
-	//     $.each(strs, function(i, str) {
-	//       if (substrRegex.test(str)) {
-	//         matches.push(str);
-	//       }
-	//     });
+	    if (!this.value) {
+	        $("#core-health-matrix table tr").show();
+	    	$("#core-health-matrix #no-data-text").hide();
+	    	if($("#view-more-link .glyphicon").hasClass('glyphicon-menu-up')) {
+	    		$("#view-more-link").show();
+			}
+			else {
+				$("#core-health-matrix table tr:nth-child(n+21)").hide();
+	    		$("#view-more-link").show();
+			}
+	    }
 
-	//     cb(matches);
-	//   };
-	// };
-
-	// var coreLabels;
-	// $.ajax({
-	//     url: "core.csv",
-	//     async: false,
-	//     success: function (data) {
-	//         coreLabels = data.split('\n');
-	//         for(var i = 0; i < coreLabels.length; i++) {
-	//         	coreLabels[i].replace(/"/g, ' ');
-	//         	if(coreLabels[i].charAt(0)=='"') {
-	//         		coreLabels[i] = coreLabels[i].substring(1, coreLabels[i].length - 1);
-	//         	}
-	//         	if(coreLabels[i].charAt(coreLabels[i].length - 1)=='"') {
-	//         		coreLabels[i] = coreLabels[i].substring(0, coreLabels[i].length - 1);
-	//         	}
-	//         }
-	//         //console.log(coreLabels);
-
-	//         // call a function on complete 
-	//         $('#core-health-matrix .input-group .typeahead').typeahead({
-	// 		  hint: true,
-	// 		  highlight: true
-	// 		},
-	// 		{
-	// 		  name: 'corelabels',
-	// 		  source: substringMatcher(coreLabels),
-	// 		  limit: 10,
-	// 		  templates: {
-	// 		    empty: [
-	// 		      '<div class="empty-message">unable to find any record that match the current query</div>'
-	// 		    ]
-	// 		  }
-	// 		});
-	//     }
-	// });
-
-	
-
+	});
+	// click clear button
+	$("#core-health-matrix .input-group .glyphicon").click(function(event) {
+		/* Act on the event */
+		$("#core-health-matrix input").val("");
+		$("#core-health-matrix table tr").show();
+    	$("#core-health-matrix #no-data-text").hide();
+    	if($("#view-more-link .glyphicon").hasClass('glyphicon-menu-up')) {
+    		$("#view-more-link").show();
+		}
+		else {
+			$("#core-health-matrix table tr:nth-child(n+21)").hide();
+    		$("#view-more-link").show();
+		}
+	});
 	
 });

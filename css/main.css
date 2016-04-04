@@ -171,6 +171,13 @@ a {
 /**************************
   core health metrics table
 **************************/
+#core-health-matrix {
+    margin-bottom: 50px;
+}
+#core-health-matrix .col-sm-6 p {
+    margin: 0;
+    line-height: 34px;
+}
 #core-health-matrix .table {
     margin-top: 150px;
     margin-bottom: 0;
@@ -204,12 +211,17 @@ a {
     top: 100%;
     left: 50%;
 }
+#core-health-matrix #no-data-text {
+    padding: 10px 0 10px 8px;
+    display: none;
+    border: 1px solid #dddddd;
+}
 #core-health-matrix #view-more-link {
     padding: 10px 0 10px 8px;
     border: 1px solid #dddddd;
     border-top: none;
     color: #324E77;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 #core-health-matrix #view-more-link:hover {
     cursor: pointer;
@@ -219,6 +231,7 @@ a {
 }
 #core-health-matrix .input-group .form-control {
     border-radius: 4px;
+    position: relative;
 }
 #core-health-matrix .input-group .form-control:focus {
     border-color: #cccccc;
@@ -227,3 +240,13 @@ a {
 #core-health-matrix .input-group {
     width: 100%;
 }
+#core-health-matrix .input-group .glyphicon {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    z-index: 10;
+    color: #cccccc;
+    font-size: 16px;
+}
+#core-health-matrix .input-group .glyphicon:hover {
+    cursor: pointer;
