@@ -262,6 +262,7 @@ a {
     width: 1000px;
     height: 600px;
     background: #ddd;
+    //display: none;
 }
 
 text {
@@ -273,7 +274,7 @@ text {
 }
 
 rect {
-  fill: none;
+  //fill: none;
   stroke: #fff;
 }
 
@@ -299,11 +300,21 @@ rect.parent,
 }
 
 .children rect.parent {
-  fill: #bbb;
+  //fill: #bbb;
   fill-opacity: .5;
+}
+.children rect.parent:hover {
+  fill-opacity: .1;
 }
 
 .children:hover rect.child {
-  fill: #bbb;
+  //fill: #bbb;
 }
 
+
+
+
+#graph a.select {
+    text-decoration: underline;
+    font-weight: bold;
+}

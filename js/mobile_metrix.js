@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+	// switch graph view 
+	$("#chart").show();
+	$("#node").hide();
+	drawTreemap();
+	drawNodeGraph();
+	$("#graph a").click(function(event) {
+		/* Act on the event */
+		$("#graph a.select").removeClass('select');
+		$(this).addClass('select')
+	});
+
+	$("#drawTreemap").click(function(event) {
+		/* Act on the event */
+		$("#chart").show();
+		$("#node").hide();
+	});
+	$("#drawNodeGraph").click(function(event) {
+		/* Act on the event */
+		$("#chart").hide();
+		$("#node").show();
+	});
+
+
+
 	$('.carousel').carousel();
 
 	$.getJSON('data/health-determinants.json', function(data) {
