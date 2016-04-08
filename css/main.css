@@ -258,8 +258,12 @@ a {
 
 
 #chart {
-    padding: 20px 45px;
+    margin: 20px 45px;
+    width: 1000px;
+    height: 600px;
+    background: #ddd;
 }
+
 text {
   pointer-events: none;
 }
@@ -278,16 +282,12 @@ rect.parent,
   stroke-width: 2px;
 }
 
-rect.parent {
-    pointer-events: none;
-}
-
 .grandparent rect {
-  fill: #e0e0e0;
+  fill: #e3e3e3;
 }
 
 .grandparent:hover rect {
-  fill: #e0e0e0;
+  fill: #e3e3e3;
 }
 
 .children rect.parent,

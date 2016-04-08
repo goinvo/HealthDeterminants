@@ -11,6 +11,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/data\/data2.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/data2.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/data\/data2-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/data\/dataForTreemap.json": {
 		"fileType": 524288,
 		"ignore": 1,
