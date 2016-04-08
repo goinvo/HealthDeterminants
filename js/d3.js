@@ -295,7 +295,7 @@ d3.json("data/dataForTreemap.json", function(err, res) {
       .key(function(d) { return d.grandfather; })
       .key(function(d) { return d.father; })
       .entries(res);
-        main({title: "World Population"}, {key: "Patient", values: data});
+        main({title: "Determinants of Health"}, {key: "Patient", values: data});
     }
 });
 
