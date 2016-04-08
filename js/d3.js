@@ -92,7 +92,7 @@ grandparent.append("text")
     .attr("y", 0 - margin.top)
     .attr("dy", "1em");
 
-d3.json("data/data2.json", function(root) {
+d3.json("data/dataForTreemap.json", function(root) {
   initialize(root);
   accumulate(root);
   layout(root);

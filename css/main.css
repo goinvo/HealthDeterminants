@@ -289,8 +289,8 @@ rect.parent,
     fill: #324E77;
 }
 
-.grandparent:hover rect {
-  fill: #ffffff;
+.grandparent:hover text {
+  fill: #5380c2;
 }
 
 .children rect.parent,
