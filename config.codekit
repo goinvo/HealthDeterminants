@@ -11,13 +11,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/health-determinants.json": {
+	"\/data\/dataForTreemap.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/health-determinants.json",
+		"inputAbbreviatedPath": "\/data\/dataForTreemap.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/health-determinants-min.json",
+		"outputAbbreviatedPath": "\/data\/dataForTreemap-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/data\/health-determinants.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/health-determinants.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/data\/health-determinants-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1

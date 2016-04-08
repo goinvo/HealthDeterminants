@@ -15,7 +15,7 @@
     stroke-width: 1.5px;
 }
 @media (max-width: 768px) {
-    #svg {
+    #chart {
         display: none;
     } 
     #mobile-matrix {
@@ -23,7 +23,7 @@
     }   
 }
 @media (min-width: 769px) {
-    #svg {
+    #chart {
         display: block;
     } 
     #mobile-matrix {
@@ -251,3 +251,56 @@ a {
 }
 #core-health-matrix .input-group .glyphicon:hover {
     cursor: pointer;
+}
+
+
+
+
+
+#chart {
+    padding: 20px 45px;
+}
+text {
+  pointer-events: none;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+rect.parent {
+    pointer-events: none;
+}
+
+.grandparent rect {
+  fill: #e0e0e0;
+}
+
+.grandparent:hover rect {
+  fill: #e0e0e0;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: .5;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+

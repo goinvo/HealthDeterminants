@@ -1,0 +1,604 @@
+[
+  {
+    "key": "Big Five Inventory (BIF)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Psychological assets",
+    "father": "Conscientiousness level",
+    "value": 3938
+  },
+  {
+    "key": "NIH Toolbox Self-Efficacy Survey",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Psychological assets",
+    "father": "Self efficacy",
+    "value": 3812
+  },
+  {
+    "key": "Life Orientation Test-Revised (LOT-R)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Psychological assets",
+    "father": "Optimism level",
+    "value": 3812
+  },
+  {
+    "key": "Life satisfaction level",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Psychological assets",
+    "father": "Life satisfaction level",
+    "value": 743
+  },
+  {
+    "key": "",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Psychological assets",
+    "father": "Cognitive function late in life",
+    "value": 743
+  },
+  {
+    "key": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Stress level",
+    "value": 3534
+  },
+  {
+    "key": "",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Hopelessness level",
+    "value": 3534
+  },
+  {
+    "key": "Generalized Axiety Disorder Scale (GAD-7)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Anxiety level",
+    "value": 3534
+  },
+  {
+    "key": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Anxiety level",
+    "value": 3534
+  },
+  {
+    "key": "Patient Reported Outcome Measurement Information System (PROMIS) T-Score",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Depression level",
+    "value": 3534
+  },
+  {
+    "key": "Patient Health Questionnaire (PHQ-9)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Depression level",
+    "value": 3534
+  },
+  {
+    "key": "Center for Epidemiologic Studies Depression Scale (CESD-R)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Negative mood and affects",
+    "father": "Depression level",
+    "value": 3534
+  },
+  {
+    "key": "Alcohol Use Disorders Identification Test (AUDIT-C)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Drug use",
+    "father": "Alcohol use habits",
+    "value": 3534
+  },
+  {
+    "key": "National Health Interview Survey (NHIS)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Drug use",
+    "father": "Tobacco use habits",
+    "value": 3534
+  },
+  {
+    "key": "Other substance habits",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Drug use",
+    "father": "Other substance habits",
+    "value": 3534
+  },
+  {
+    "key": "Sleep patterns",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Sleep patterns",
+    "father": "Sleep patterns",
+    "value": 3534
+  },
+  {
+    "key": "Diet patterns",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Diet patterns",
+    "father": "Diet patterns",
+    "value": 3534
+  },
+  {
+    "key": "Exercise vital signs",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Physical activity",
+    "father": "Exercise vital signs",
+    "value": 7074
+  },
+  {
+    "key": "Metabolic Equivalent of Task (MET minutes)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Physical activity",
+    "father": "Metabolic Equivalent of Task (MET minutes)",
+    "value": 7074
+  },
+  {
+    "key": "Gun behavior",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Other risk related behaviors",
+    "father": "Gun behavior",
+    "value": 7074
+  },
+  {
+    "key": "Sexual activity",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Other risk related behaviors",
+    "father": "Sexual activity",
+    "value": 7074
+  },
+  {
+    "key": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)",
+    "grandgrandfather": "Individual Behavior",
+    "grandfather": "Other risk related behaviors",
+    "father": "Motor vehicle behavior",
+    "value": 7074
+  },
+  {
+    "key": "Gender identity",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Gender identity",
+    "father": "Gender identity",
+    "value": 1983
+  },
+  {
+    "key": "American Community Survey (ACS)",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Military service",
+    "father": "American Community Survey (ACS)",
+    "value": 1983
+  },
+  {
+    "key": "National Health Interview Survey (NHIS)",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Sexual orientation",
+    "father": "National Health Interview Survey (NHIS)",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Citizenship status",
+    "father": "US census",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "Occupation",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "Education level",
+    "value": 5842
+  },
+  {
+    "key": "Language and literacy level",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "Language and literacy level",
+    "value": 5842
+  },
+  {
+    "key": "Family income level",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "Family income level",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "Individual income level",
+    "value": 5842
+  },
+  {
+    "key": "Subjective social status",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social status",
+    "father": "MacArthur SES indicator",
+    "value": 5842
+  },
+  {
+    "key": "History of incarceration",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "History of incarceration",
+    "father": "History of incarceration",
+    "value": 5842
+  },
+  {
+    "key": "Religious involvement",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Culture and tradition",
+    "father": "Religious involvement",
+    "value": 5842
+  },
+  {
+    "key": "Community cultural norms",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Culture and tradition",
+    "father": "Community cultural norms",
+    "value": 5842
+  },
+  {
+    "key": "Family cultural norms",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Culture and tradition",
+    "father": "Family cultural norms",
+    "value": 5842
+  },
+  {
+    "key": "National Health and Nutrition Examination Survey (NHANES III)",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social connectedness",
+    "father": "Quality of community support",
+    "value": 5842
+  },
+  {
+    "key": "National Health and Nutrition Examination Survey (NHANES III)",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social connectedness",
+    "father": "Quality of friends support",
+    "value": 5842
+  },
+  {
+    "key": "National Health and Nutrition Examination Survey (NHANES III)",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social connectedness",
+    "father": "Quality of family support",
+    "value": 5842
+  },
+  {
+    "key": "Intimate Partner Violence: HARK questionnaire",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social connectedness",
+    "father": "Intimate relationships",
+    "value": 5842
+  },
+  {
+    "key": "Civic participation",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Social connectedness",
+    "father": "Civic participation",
+    "value": 5842
+  },
+  {
+    "key": "Adverse Childhood Experiences (ACE) score",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Early childhood education and development",
+    "father": "Adverse Childhood Experiences (ACE) score",
+    "value": 5842
+  },
+  {
+    "key": "Discrimination",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Discrimination",
+    "father": "Discrimination",
+    "value": 5842
+  },
+  {
+    "key": "Work conditions",
+    "grandgrandfather": "Social Circumstances",
+    "grandfather": "Work conditions",
+    "father": "Work conditions",
+    "value": 5842
+  },
+  {
+    "key": "Genetic test",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Single-gene",
+    "value": 5842
+  },
+  {
+    "key": "Genetic test",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Chromosomal",
+    "value": 5842
+  },
+  {
+    "key": "Genetic test",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Multifactorial",
+    "value": 5842
+  },
+  {
+    "key": "Genetic test",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Mitochondrial DNA-linked",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Gender",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Genetic",
+    "father": "Race and ethnicity",
+    "value": 5842
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body structure",
+    "father": "Age",
+    "value": 5842
+  },
+  {
+    "key": "Height",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body structure",
+    "father": "Height",
+    "value": 5842
+  },
+  {
+    "key": "Weight",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body structure",
+    "father": "Weight",
+    "value": 5842
+  },
+  {
+    "key": "Waist-hip ratio",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body structure",
+    "father": "Waist-hip ratio",
+    "value": 5842
+  },
+  {
+    "key": "DXA scan",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Bone density",
+    "value": 5842
+  },
+  {
+    "key": "Sphygmomanometry",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Bone pressure",
+    "value": 5842
+  },
+  {
+    "key": "Biochemical function",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Biochemical function",
+    "value": 5842
+  },
+  {
+    "key": "Sensory system testing",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Sensory function",
+    "value": 5842
+  },
+  {
+    "key": "Motor system testing",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Movement and balance",
+    "value": 5842
+  },
+  {
+    "key": "Strength testing",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Strength and robustness",
+    "value": 5842
+  },
+  {
+    "key": "Cardiorespiratory fitness test",
+    "grandgrandfather": "Genetics",
+    "grandfather": "Body function",
+    "father": "Fitness",
+    "value": 5842
+  },
+  {
+    "key": "Rapid Estimate of Adult Literacy in Medicine (REALM)",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Health literacy",
+    "father": "Rapid Estimate of Adult Literacy in Medicine (REALM)",
+    "value": 5842
+  },
+  {
+    "key": "Provider cultural competency",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Quality of healthcare",
+    "father": "Provider cultural competency",
+    "value": 5842
+  },
+  {
+    "key": "Provider linguistic competency",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Quality of healthcare",
+    "father": "Provider linguistic competency",
+    "value": 5842
+  },
+  {
+    "key": "Quality of insurance",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Access to healthcare",
+    "father": "Quality of insurance",
+    "value": 5842
+  },
+  {
+    "key": "Vaccine registries",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Access to healthcare",
+    "father": "Vaccines and immunizations",
+    "value": 5842
+  },
+  {
+    "key": "Provider availability",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Access to healthcare",
+    "father": "Provider availability",
+    "value": 5842
+  },
+  {
+    "key": "Distance to resources",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Access to healthcare",
+    "father": "Distance to resources",
+    "value": 5842
+  },
+  {
+    "key": "Patient Activation Measure (PAM survey)",
+    "grandgrandfather": "Medical Care",
+    "grandfather": "Patient engagement",
+    "father": "Patient Activation Measure (PAM survey)",
+    "value": 5842
+  },
+  {
+    "key": "National Health Interview Survey (NHIS)",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Pollution",
+    "father": "Tobacco use exposure",
+    "value": 5842
+  },
+  {
+    "key": "National Health Interview Survey (NHIS)",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Pollution",
+    "father": "Air quality",
+    "value": 5842
+  },
+  {
+    "key": "Lead exposure levels",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Pollution",
+    "father": "Lead exposure levels",
+    "value": 5842
+  },
+  {
+    "key": "Carcinogen exposure",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Pollution",
+    "father": "Carcinogen exposure",
+    "value": 5842
+  },
+  {
+    "key": "Water quality",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Pollution",
+    "father": "Water quality",
+    "value": 5842
+  },
+  {
+    "key": "Allergens",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Allergens",
+    "father": "Allergens",
+    "value": 10001
+  },
+  {
+    "key": "Residence quality",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Residence quality",
+    "value": 8217
+  },
+  {
+    "key": "Walkability",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Walkability",
+    "value": 8217
+  },
+  {
+    "key": "Recreational activity access",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Recreational activity access",
+    "value": 8217
+  },
+  {
+    "key": "Access to vocational training",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Access to vocational training",
+    "value": 8217
+  },
+  {
+    "key": "Educational opportunities",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Educational opportunities",
+    "value": 8217
+  },
+  {
+    "key": "Public space quality",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Public space quality",
+    "value": 8217
+  },
+  {
+    "key": "Job opportunities",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Job opportunities",
+    "value": 8217
+  },
+  {
+    "key": "American Community Survey (ACS)",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Crowding conditions",
+    "value": 8217
+  },
+  {
+    "key": "American Community Survey (ACS)",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Transportation quality",
+    "value": 8217
+  },
+  {
+    "key": "US census",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Crime level",
+    "value": 8217
+  },
+  {
+    "key": "Geocoded residential address",
+    "grandgrandfather": "Physical Environment",
+    "grandfather": "Location",
+    "father": "Access to healthy foods",
+    "value": 8217
+  }
+]
