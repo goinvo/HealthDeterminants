@@ -1,10 +1,32 @@
 $(document).ready(function() {
 
 	// switch graph view 
-	$("#chart").show();
-	$("#node").hide();
 	drawTreemap();
 	drawNodeGraph();
+	if ($(window).width() < 769) {
+	    $("#chart").hide();
+		$("#node").hide();
+		$("#graph p:nth-child(3)").hide();
+	}
+	else {
+	    $("#chart").show();
+		$("#node").hide();
+		$("#graph p:nth-child(3)").show();
+	}
+	$(window).resize(function() {
+	  //resize just happened, pixels changed
+	  if ($(window).width() < 769) {
+		    $("#chart").hide();
+			$("#node").hide();
+			$("#graph p:nth-child(3)").hide();
+		}
+		else {
+		    $("#chart").show();
+			$("#node").hide();
+			$("#graph p:nth-child(3)").show();
+		}
+	});
+	
 	$("#graph a").click(function(event) {
 		/* Act on the event */
 		$("#graph a.select").removeClass('select');

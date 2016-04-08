@@ -15,7 +15,7 @@
     stroke-width: 1.5px;
 }
 @media (max-width: 768px) {
-    #chart {
+    #chart,#node {
         display: none;
     } 
     #mobile-matrix {
@@ -23,7 +23,7 @@
     }   
 }
 @media (min-width: 769px) {
-    #chart {
+    #chart,#node {
         display: block;
     } 
     #mobile-matrix {
