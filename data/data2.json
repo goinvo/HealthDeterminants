@@ -55,8 +55,406 @@
                         ]
                     }
                 ]  
+            },
+            {
+                "name": "Drug use",
+                "children": [
+                    {
+                        "name": "Alcohol use habits",
+                        "children": [
+                            {"name": "Alcohol Use Disorders Identification Test (AUDIT-C)", "value": 3534}
+                        ]
+                    },
+                    {
+                        "name": "Tobacco use habits",
+                        "children": [
+                            {"name": "National Health Interview Survey (NHIS)", "value": 3534}
+                        ]
+                    },
+                    { "name": "Other substance habits", "value": 3534 }
+                ]
+            },
+            {"name": "Sleep patterns", "value": 3534},
+            {"name": "Diet patterns", "value": 3534},
+            {
+                "name": "Physical activity",
+                "children": [
+                {
+                    "name": "Exercise vital signs",
+                    "children": [
+                        {"name": "Exercise vital signs", "value": 7074}
+                    ]
+                },
+                {
+                    "name": "Metabolic Equivalent of Task (MET minutes)",
+                    "children": [
+                        {"name": "Metabolic Equivalent of Task (MET minutes)", "value": 7074}
+                    ]
+                }
+                ]
+            },
+            {
+                "name": "Other risk related behaviors",
+                "children": [
+                    {"name": "Gun behavior", "value": 7074},
+                    {"name": "Sexual activity", "value": 7074},
+                    {"name": "Motor vehicle behavior",
+                        "children": [
+                            {"name": "Behavioral Risk Factor Surveillance System questionnaire (BRFSS)", "value": 7074}
+                        ]
+                    }
+                ]
             }
         ]
+    },
+    {
+        "name": "Social Circumstances",
+        "children": [
+            {"name": "Gender identity", "value": 1983},
+            {
+              "name": "Military service",
+              "children": [
+                {
+                  "name": "American Community Survey (ACS)",
+                  "children": [
+                    {"name": "American Community Survey (ACS)", "value": 1983}
+                  ]
+                }
+              ]
+            },
+            {
+                "name": "Sexual orientation",
+                "children": [
+                  {
+                    "name": " ",
+                    "children": [
+                      {"name": "National Health Interview Survey (NHIS)", "value": 5842}
+                    ]
+                  }
+                ]
+            },
+            {
+                "name": "Citizenship status",
+                "children": [
+                {
+                    "name": "US census",
+                    "children": [
+                        {"name": "US census", "value": 5842}
+                    ]
+                }
+                ]
+            },
+            {
+              "name": "Social status",
+              "children": [
+                {
+                  "name": "Occupation",
+                  "children": [
+                    {"name": "US census", "value": 5842}
+                  ]
+                },
+                {
+                  "name": "Education level",
+                  "children": [
+                    {"name": "US census", "value": 5842}
+                  ]
+                },
+                {"name": "Language and literacy level", "value": 5842},
+                {"name": "Family income level", "value": 5842},
+                {
+                  "name": "Individual income level",
+                  "children": [
+                    {"name": "US census", "value": 5842}
+                  ]
+                },
+                {
+                  "name": "Subjective social status",
+                  "children": [
+                    {"name": "MacArthur SES indicator", "value": 5842}
+                  ]
+                }
+              ]
+            },
+            {"name": "History of incarceration", "value": 5842},
+            {
+              "name": "Culture and tradition",
+              "children": [
+                {"name": "Religious involvement", "value": 5842},
+                {"name": "Community cultural norms", "value": 5842},
+                {"name": "Family cultural norms", "value": 5842}
+              ]
+            },
+            {
+              "name": "Social connectedness",
+              "children": [
+                {
+                  "name": "Quality of community support",
+                  "children": [
+                    {"name": "National Health and Nutrition Examination Survey (NHANES III)", "value": 5842}
+                  ]
+                },
+                {
+                  "name": "Quality of friends support",
+                  "children": [
+                    {"name": "National Health and Nutrition Examination Survey (NHANES III)", "value": 5842}
+                  ]
+                },
+                {
+                  "name": "Quality of family support",
+                  "children": [
+                    {"name": "National Health and Nutrition Examination Survey (NHANES III)", "value": 5842}
+                  ]
+                },
+                {
+                  "name": "Intimate relationships",
+                  "children": [
+                    {"name": "Intimate Partner Violence: HARK questionnaire", "value": 5842}
+                  ]
+                },
+                {"name": "Civic participation", "value": 5842}
+              ]
+            },
+            {
+              "name": "Early childhood education and development",
+              "children": [
+                {"name": "Adverse Childhood Experiences (ACE) score",
+                  "children": [
+                    {"name": "Adverse Childhood Experiences (ACE) score", "value": 5842}
+                  ]
+                }
+              ]
+            },
+            {"name": "Discrimination", "value": 5842},
+            {"name": "Work conditions", "value": 5842}
+        ]
+    },
+    {
+        "name": "Genetics",
+        "children": [
+        {
+            "name": "Genetic",
+            "children": [
+            {
+                "name": "Single-gene",
+                "children": [
+                    {"name": "Genetic test", "value": 5842}
+                ]
+            },
+            {
+                "name": "Chromosomal",
+                "children": [
+                    {"name": "Genetic test", "value": 5842}
+                ]
+            },
+            {
+                "name": "Multifactorial",
+                "children": [
+                    {"name": "Genetic test", "value": 5842}
+                ]
+            },
+            {
+                "name": "Mitochondrial DNA-linked",
+                "children": [
+                    {"name": "Genetic test", "value": 5842}
+                ]
+            },
+            {
+                "name": "Gender",
+                "children": [
+                    {"name": "US census", "value": 5842}
+                ]
+            },
+            {
+                "name": "Race and ethnicity",
+                "children": [
+                    {"name": "US census", "value": 5842}
+                ]
+            }
+            ]
+        },
+        {
+            "name": "Body structure",
+            "children": [
+            {
+                "name": "Age",
+                "children": [
+                    {"name": "US census", "value": 5842}
+                ]
+            },
+            {
+                "name": "Height",
+                "children": [
+                    {"name": "Height", "value": 5842}
+                ]
+            },
+            {
+                "name": "Weight",
+                "children": [
+                    {"name": "Weight", "value": 5842}
+                ]
+            },
+            {
+                "name": "Waist-hip ratio",
+                "children": [
+                    {"name": "Waist-hip ratio", "value": 5842}
+                ]
+            }
+            ]
+        },
+        {
+            "name": "Body function",
+            "children": [
+            {
+                "name": "Bone density",
+                "children": [
+                    {"name": "DXA scan", "value": 5842}
+                ]
+            },
+            {
+                "name": "Blood pressure",
+                "children": [
+                    {"name": "Sphygmomanometry", "value": 5842}
+                ]
+            },
+            {"name": "Biochemical function", "value": 5842},
+            {
+                "name": "Sensory function",
+                "children": [
+                    {"name": "Sensory system testing", "value": 5842}
+                ]
+            },
+            {
+                "name": "Movement and balance",
+                "children": [
+                    {"name": "Motor system testing", "value": 5842}
+                ]
+            },
+            {
+                "name": "Strength and robustness",
+                "children": [
+                    {"name": "Strength testing", "value": 5842}
+                ]
+            },
+            {
+                "name": "Fitness",
+                "children": [
+                    {"name": "Cardiorespiratory fitness test", "value": 5842}
+                ]
+            }
+            ]
+        }
+        ]
+    },
+    {
+        "name": "Medical Care",
+        "children": [
+        {
+          "name": "Health literacy",
+          "children": [
+            {
+              "name": "Rapid Estimate of Adult Literacy in Medicine (REALM)",
+              "children": [
+                {"name": "Rapid Estimate of Adult Literacy in Medicine (REALM)", "value": 5842}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Quality of healthcare",
+          "children": [
+            {"name": "Provider cultural competency", "value": 5842},
+            {"name": "Provider linguistic competency", "value": 5842}
+          ]
+        },
+        {
+          "name": "Access to healthcare",
+          "children": [
+            {"name": "Quality of insurance", "value": 5842},
+            {
+              "name": "Vaccines and immunizations",
+              "children": [
+                {"name": "Vaccine registries", "value": 5842}
+              ]
+            },
+            {"name": "Provider availability", "value": 5842},
+            {"name": "Distance to resources", "value": 5842}
+          ]
+        },
+        {
+          "name": "Patient engagement",
+          "children": [
+            {
+              "name": "Patient Activation Measure (PAM survey)",
+              "children": [
+                {"name": "Patient Activation Measure (PAM survey)", "value": 5842}
+              ]
+            }
+          ]
+        }
+        ]
+    },
+    {
+        "name": "Physical Environment",
+        "children": [
+        {
+          "name": "Pollution",
+          "children": [
+            {
+              "name": "Tobacco use exposure",
+              "children": [
+                {"name": "National Health Interview Survey (NHIS)", "value": 5842}
+              ]
+            },
+            {
+              "name": "Air quality",
+              "children": [
+                {"name": "National Health Interview Survey (NHIS)", "value": 5842}
+              ]
+            },
+            {"name": "Lead exposure levels", "value": 5842},
+            {"name": "Carcinogen exposure", "value": 5842},
+            {"name": "Water quality", "value": 5842}
+          ]
+        },
+        {"name": "Allergens", "value": 10001},
+        {"name": "Exposure to firearms", "value": 8217},
+        {
+          "name": "Location",
+          "children": [
+            {"name": "Residence quality", "value": 5842},
+            {"name": "Walkability", "value": 5842},
+            {"name": "Recreational activity access", "value": 5842},
+            {"name": "Access to vocational training", "value": 5842},
+            {"name": "Educational opportunities", "value": 5842},
+            {"name": "Public space quality", "value": 5842},
+            {"name": "Job opportunities", "value": 5842},
+            {
+              "name": "Crowding conditions",
+              "children": [
+                {"name": "American Community Survey (ACS)", "value": 5842}
+              ]
+            },
+            {
+              "name": "Transportation quality",
+              "children": [
+                {"name": "American Community Survey (ACS)", "value": 5842}
+              ]
+            },
+            {
+              "name": "Crime level",
+              "children": [
+                {"name": "US census", "value": 5842}
+              ]
+            },
+            {
+              "name": "Access to healthy foods",
+              "children": [
+                {"name": "Geocoded residential address", "value": 5842}
+              ]
+            }
+          ]
+        }
+        ]
     }
-    ]
+]
 }
