@@ -203,6 +203,13 @@ function drawTreemap() {
           .text(function(d) { return d.source3; })
           .call(text);
 
+          g.append("text")
+            .attr("dy", "115px")
+          .attr("dx", "5px")
+          .attr("font-size", "14px")
+          .text(function(d) { return d.source4; })
+          .call(text);
+
       function transition(d) {
         if (transitioning || !d) return;
         transitioning = true;

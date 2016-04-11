@@ -38,14 +38,16 @@
                     {
                         "name": "Anxiety level",
                         "source": "- Generalized Axiety Disorder Scale (GAD-7)",
-                        "source2": "- Patient Reported Outcome Measurement Information System (PROMIS) T-Score", 
+                        "source2": "- Patient Reported Outcome Measurement Information System", 
+                        "source3": "(PROMIS) T-Score", 
                         "value": 3534
                     },
                     {
                         "name": "Depression level",
-                        "source": "- Patient Reported Outcome Measurement Information System (PROMIS) T-Score",
-                        "source2": "- Patient Health Questionnaire (PHQ-9)",
-                        "source3": "- Center for Epidemiologic Studies Depression Scale (CESD-R)",
+                        "source": "- Patient Reported Outcome Measurement Information System", 
+                        "source2": "(PROMIS) T-Score", 
+                        "source3": "- Patient Health Questionnaire (PHQ-9)",
+                        "source4": "- Center for Epidemiologic Studies Depression Scale (CESD-R)",
                         "value": 3534
                     }
                 ]  
