@@ -15,7 +15,7 @@
     stroke-width: 1.5px;
 }
 @media (max-width: 768px) {
-    #chart,#node {
+    #chart,#node, #horizontal-tree {
         display: none;
     } 
     #mobile-matrix {
@@ -23,7 +23,7 @@
     }   
 }
 @media (min-width: 769px) {
-    #chart,#node {
+    #chart,#node, #horizontal-tree {
         display: block;
     } 
     #mobile-matrix {
@@ -304,7 +304,7 @@ rect.parent,
   fill-opacity: .3;
 }
 .children rect.parent:hover {
-  fill-opacity: .2;
+  fill-opacity: .4;
 }
 
 .children:hover rect.child {
@@ -318,3 +318,24 @@ rect.parent,
     text-decoration: underline;
     font-weight: bold;
 }
+
+
+
+#horizontal-tree .node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#horizontal-tree .node text {
+  font-size: 14px;
+}
+
+#horizontal-tree path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+

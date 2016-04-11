@@ -3,14 +3,17 @@ $(document).ready(function() {
 	// switch graph view 
 	drawTreemap();
 	drawNodeGraph();
+	drawHorizontalTree();
 	if ($(window).width() < 769) {
 	    $("#chart").hide();
 		$("#node").hide();
+		$("#horizontal-tree").hide();
 		$("#graph p:nth-child(3)").hide();
 	}
 	else {
 	    $("#chart").show();
 		$("#node").hide();
+		$("#horizontal-tree").hide();
 		$("#graph p:nth-child(3)").show();
 	}
 	$(window).resize(function() {
@@ -18,12 +21,14 @@ $(document).ready(function() {
 	  if ($(window).width() < 769) {
 		    $("#chart").hide();
 			$("#node").hide();
+			$("#horizontal-tree").hide();
 			$("#graph p:nth-child(3)").hide();
 		}
 		else {
-		    $("#chart").show();
-			$("#node").hide();
-			$("#graph p:nth-child(3)").show();
+		 //    $("#chart").show();
+			// $("#node").hide();
+			// $("#horizontal-tree").hide();
+			// $("#graph p:nth-child(3)").show();
 		}
 	});
 	
@@ -37,11 +42,19 @@ $(document).ready(function() {
 		/* Act on the event */
 		$("#chart").show();
 		$("#node").hide();
+		$("#horizontal-tree").hide();
 	});
 	$("#drawNodeGraph").click(function(event) {
 		/* Act on the event */
 		$("#chart").hide();
 		$("#node").show();
+		$("#horizontal-tree").hide();
+	});
+	$("#drawHorizontalTree").click(function(event) {
+		/* Act on the event */
+		$("#chart").hide();
+		$("#node").hide();
+		$("#horizontal-tree").show();
 	});
 
 
