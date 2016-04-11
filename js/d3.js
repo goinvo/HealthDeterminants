@@ -170,8 +170,37 @@ function drawTreemap() {
           .text(function(d) { return formatNumber(d.value); });
 
       g.append("text")
-          .attr("dy", ".75em")
+          .attr("dy", "15px")
+          .attr("dx", "5px")
+          .attr("font-size", "16px")
+          //.attr("fill", "#324E77")
           .text(function(d) { return d.name; })
+          .call(text);
+        g.append("text")
+          .attr("dy", "35px")
+          .attr("dx", "5px")
+          .attr("font-size", "14px")
+          .text(function(d) { if(d.source) return "source: ";})
+          .call(text);
+
+        g.append("text")
+            .attr("dy", "55px")
+          .attr("dx", "5px")
+          .attr("font-size", "14px")
+          .text(function(d) { return d.source; })
+          .call(text);
+        g.append("text")
+            .attr("dy", "75px")
+          .attr("dx", "5px")
+          .attr("font-size", "14px")
+          .text(function(d) { return d.source2; })
+          .call(text);
+
+          g.append("text")
+            .attr("dy", "95px")
+          .attr("dx", "5px")
+          .attr("font-size", "14px")
+          .text(function(d) { return d.source3; })
           .call(text);
 
       function transition(d) {
@@ -223,7 +252,7 @@ function drawTreemap() {
           .attr("y", function(d) { return y(d.y); })
           .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
           .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); })
-          .attr("fill", function(d) { return d.parent ? color(d.name) : null; });
+         // .attr("fill", function(d) { return d.parent ? color(d.name) : null; });
     }
 
     function name(d) {

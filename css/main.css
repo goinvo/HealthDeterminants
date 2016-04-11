@@ -274,7 +274,7 @@ text {
 }
 
 rect {
-  //fill: none;
+  fill: none;
   stroke: #fff;
 }
 
@@ -300,15 +300,15 @@ rect.parent,
 }
 
 .children rect.parent {
-  //fill: #bbb;
-  fill-opacity: .5;
+  fill: #ddd;
+  fill-opacity: .3;
 }
 .children rect.parent:hover {
-  fill-opacity: .1;
+  fill-opacity: .2;
 }
 
 .children:hover rect.child {
-  //fill: #bbb;
+  fill: #eee;
 }
 
 
