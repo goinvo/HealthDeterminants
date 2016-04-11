@@ -290,7 +290,7 @@ var svg = d3.select("#horizontal-tree").append("svg")
     .attr("width", 1000)
     .attr("height", height)
   .append("g")
-    .attr("transform", "translate(45,0)");
+    .attr("transform", "translate(50,0)");
 
 d3.json("data/dataForTreemap.json", function(error, root) {
   if (error) throw error;

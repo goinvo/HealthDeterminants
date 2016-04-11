@@ -19,16 +19,12 @@ $(document).ready(function() {
 	$(window).resize(function() {
 	  //resize just happened, pixels changed
 	  if ($(window).width() < 769) {
-		    $("#chart").hide();
-			$("#node").hide();
-			$("#horizontal-tree").hide();
+		    $("#graphs").hide();
 			$("#graph p:nth-child(3)").hide();
 		}
 		else {
-		 //    $("#chart").show();
-			// $("#node").hide();
-			// $("#horizontal-tree").hide();
-			// $("#graph p:nth-child(3)").show();
+		    $("#graphs").show();
+		    $("#graph p:nth-child(3)").show();
 		}
 	});
 	
