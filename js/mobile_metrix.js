@@ -1,17 +1,20 @@
 $(document).ready(function() {
 
-	// switch graph view 
+	// switch graph view
+	drawSunburst();
 	drawTreemap();
 	drawNodeGraph();
 	drawHorizontalTree();
 	if ($(window).width() < 769) {
+	    $("#sunburst").hide();
 	    $("#chart").hide();
 		$("#node").hide();
 		$("#horizontal-tree").hide();
 		$("#graph p:nth-child(3)").hide();
 	}
 	else {
-	    $("#chart").show();
+	   $("#sunburst").show();
+	    $("#chart").hide();
 		$("#node").hide();
 		$("#horizontal-tree").hide();
 		$("#graph p:nth-child(3)").show();
@@ -39,18 +42,28 @@ $(document).ready(function() {
 		$("#chart").show();
 		$("#node").hide();
 		$("#horizontal-tree").hide();
+		$("#sunburst").hide();
 	});
 	$("#drawNodeGraph").click(function(event) {
 		/* Act on the event */
 		$("#chart").hide();
 		$("#node").show();
 		$("#horizontal-tree").hide();
+		$("#sunburst").hide();
 	});
 	$("#drawHorizontalTree").click(function(event) {
 		/* Act on the event */
 		$("#chart").hide();
 		$("#node").hide();
 		$("#horizontal-tree").show();
+		$("#sunburst").hide();
+	});
+	$("#drawSunburst").click(function(event) {
+		/* Act on the event */
+		$("#chart").hide();
+		$("#node").hide();
+		$("#horizontal-tree").hide();
+		$("#sunburst").show();
 	});
 
 

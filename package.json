@@ -1,0 +1,9 @@
+{
+  "name": "healthdeterminants",
+  "version": "0.1.0",
+  "description": "healthdeterminants",
+  "repository": "healthdeterminants",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
