@@ -329,9 +329,7 @@ d3.select(self.frameElement).style("height", height + "px");
 function drawSunburst() {
   var width = 960,
     height = 700,
-    radius = (Math.min(width, height) / 2) - 10;
-
-  var formatNumber = d3.format(",d");
+    radius = Math.min(width, height) / 2;
 
   var x = d3.scale.linear()
       .range([0, 2 * Math.PI]);
@@ -340,6 +338,11 @@ function drawSunburst() {
       .range([0, radius]);
 
   var color = d3.scale.category20c();
+  var colorIndividual = '#fbd198'; //251,209,152
+  var colorSocial = '#75d1da'; //117,209,218
+  var colorBiology = '#f3f6c2'; //243,246,194
+  var colorMedical = '#f7b1a3'; //247,177,163
+  var colorPhysical = '#90eed4'; //144,238,212
 
   var partition = d3.layout.partition()
       .value(function(d) { return d.size; });
@@ -359,32 +362,42 @@ function drawSunburst() {
   d3.json("/data/health-determinants.json", function(error, root) {
     if (error) throw error;
 
-    svg.selectAll("path")
+    var g = svg.selectAll("g")
         .data(partition.nodes(root))
-      .enter().append("path")
+      .enter().append("g");
+
+    var path = g.append("path")
         .attr("d", arc)
         .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
-        .on("click", click)
-      .append("title")
-        .text(function(d) { return d.name + "\n" + formatNumber(d.value); });
+        .on("click", click);
+
+    var text = g.append("text")
+        .attr("transform", function(d) { return "rorate(" + computeTextRotation(d) + ")"; })
+        .attr("x", function(d) { reutrn y(d.y); })
+        .attr("dx", "6") //margin
+        .attr("dy", ".35em") //vertical-align
+        .text(function(d) { return d.name; });
   });
 
   function click(d) {
-    svg.transition()
-        .duration(750)
-        .tween("scale", function() {
-          var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
-              yd = d3.interpolate(y.domain(), [d.y, 1]),
-              yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
-          return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
-        })
-      .selectAll("path")
-        .attrTween("d", function(d) { return function() { return arc(d); }; });
+    // fade out all text elements
+    text.transition().attr("opacity", 0);
 
-    grandparent.append("text")
-      .attr("x", 0)
-      .attr("y", 0 - margin.top)
-      .attr("dy", "1em");
+    path.transition()
+      .duration(750)
+      .attrTween("d", arcTween(d))
+      .each("end", function(e, i) {
+          // check if the animated element's data e lies within the visible angle span given in d
+          if (e.x >= d.x && e.x < (d.x + d.dx)) {
+            // get a selection of the associated text element
+            var arcText = d3.select(this.parentNode).select("text");
+            // fade in the text element and recalculate positions
+            arcText.transition().duration(750)
+              .attr("opacity", 1)
+              .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
+              .attr("x", function(d) { return y(d.y); });
+          }
+      });
   }
 
   d3.select(self.frameElement).style("height", height + "px");
