@@ -1,0 +1,108 @@
+h1{ 
+  padding: 40px 0 40px 0; 
+  text-align: center; 
+  color: #FFFFFF; 
+  display: block;
+  background-color: #0F93B2;
+  text-transform: uppercase; 
+  font-size: 3.0rem; /* 30px */
+  }
+
+h2{
+  padding: 15px 0 15px 0;
+  color: #0F93B2;
+  text-transform: uppercase;
+  font-size: 2.4rem; /* 24px */
+}
+
+h3{
+  padding: 5px; 
+  font-size: 1.8rem; /* 18px */
+  text-align: center;
+  color: #FFFFFF;
+  background-color:#0F93B2;
+
+
+}
+
+h4{
+  padding: 5px;
+  color: #0F93B2;
+  text-transform: uppercase;
+  font-size: 2.4rem; /* 24px */
+  text-align: center;
+}
+
+h5{
+  padding: 5px; 
+   color: #4A4A4A; 
+  font-size: 1rem;
+}
+
+h6{
+  padding:5px;
+  color: #A8A8AD;
+  font-size: 1rem;
+  text-align: right;
+}
+p{
+  text-align: left;
+  padding: 5px; 
+  color: #4A4A4A; 
+  font-size: 1.4rem; /* 14px */
+  
+}
+
+body {
+  padding: 100px; 
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+ul {
+    text-align: left;  
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    color: #4A4A4A; 
+    font-size: 1.4rem; /* 14px */
+ 
+}
+
+ul a{
+    text-align: left;  
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    color: #4A4A4A; 
+    font-size: 1rem; 
+}
+li {
+    float: left;
+    font-size: 1.4rem; /* 14px */
+    text-decoration: uppercase;
+    
+}
+
+li a {
+    display: block;
+    color: #0F93B2;
+    text-align: center;
+    padding: 14px 16px;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #87C9D9;
+}
+
+img{
+   max-width: 100%; 
+}
+
+
+
+@media screen and (max-width:487px){
+  font-size:100%
+}

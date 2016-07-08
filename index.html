@@ -1,2467 +1,529 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Determinants of Health</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
+<!DOCTYPE> 
+  <html lang= “en-US”>
+  <head> 
+    <meta http-equiv= “Content-Type” content=“text/html’ charset=UTF-8”>
+    <title> Healthcare Determinants </title> 
+    <meta name= “viewport” content= “initial scale=1, width=device-width”>
 
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container">
-	    <div class="navbar-header">
-	    	<ul class="nav navbar-nav">
-		    	<li><a href="https://github.com/goinvo/HealthDeterminants/blob/master/posters/Health_determinants_system_concept.pdf">Poster</a></li>
-		    	<li><a href="https://github.com/goinvo/HealthDeterminants">Github</a></li>
-		    	<li><a href="mailto:info@goinvo.com">Feedback</a></li>
-		    </ul>
-	    </div>
-	  </div>
-	</nav>
+    <link href=‘https://fonts.googleapis.com/css?family=Soutce+sans+pro: 400, 300, 600, 700, 300italic, 400italic, 600italic, 700italic’ rel=‘stylesheet’ type=‘text/css’>
+    <link rel=“stylesheet: href=“./assets/css/guide.css” media=“screen”> 
+  </head> 
 
-	<section class="section-padding" id="graph">
-		<h1>Determinants of Health</h1>
-		<p>Health data interoperability is a necessity that will affect medical workflows,patient outcomes, and the relationship between patients and their providers. This is a model of health determinants that have a high correlation with health outcomes for an individual, the metrics that go into quantifiably measuring those determinants, and the principles that should guide how that health data should be responsibly used. </p>
-		<p>View by: <a href="javascript:void(0)" class="select" id="drawSunburst">Sunburst</a> | <a href="javascript:void(0)" id="drawTreemap">Zoomable Treemap</a> | <a href="javascript:void(0)" id="drawNodeGraph">Node Circle</a> | <a href="javascript:void(0)" id="drawHorizontalTree">Horizontal Tree</a></p>
-		<div id="graphs">
-			<div id="sunburst"></div>
-			<div id="node"></div>
-			<div id="chart"></div>
-			<div id="horizontal-tree"></div>
-		</div>
-		
-	</section>
-	<div id="mobile-matrix" class="carousel slide" data-ride="carousel" data-interval="false">
-		<div class="carousel-inner" role="listbox">
-		    <script id="matrixTemplate" type="text/template">
-		    	{{#children}}
-			    <div class="item">
-				    <p class="title">{{name}}</p>
-				    {{#children}}
-			    	<ul>
-			    		<li>{{name}}</li>
-			    		{{#children}}
-				    	<ul class="sub-list">
-				    		<li>{{name}}</li>
-				    		{{#children}}
-					    	<ul class="undersub-list">
-					    		<li>{{name}}</li>
-					    	</ul>
-					    	{{/children}}
-					    	{{^children}} {{/children}}
-				    	</ul>
-				    	{{/children}}
-				    	{{^children}} {{/children}}
-			    	</ul>
-			    	{{/children}}
-			    </div>
-			    {{/children}}
-			</script>
-		 </div>
+    
+      
+<!--navigation-->      
+<div class="topNav">
+  <ul>
+        <li><a> Home </a></li>
+    <li><a> Data </a></li>
+    <li><a> Github </a></li>
+    <li><a> Contact </a></li>
+    </ul>
+</div> 
+<!--MAIN CONTENT-->      
+<body> 
+  
+  <div class= “header>
+    <h1 class=“guide-section-title”> Healthcare Determinants </h1>
+  </div>  
+  
+  <div class=“guide”> 
+    <div class= “guide-section” id=“problem”> 
+     <h2 class=“guide-section-title”> The Problem </h2> 
+      <p>Our current health systems main focus is on clinical care. However, it is necessary to view health as a holistic measure of an individual’s entire living situation and life experience.</p>
+            <p>The determinants of health extend far beyond medical care and can be used to improve patient care within both the clinical and public health space.</p>
+    </div> 
+          
+            <hr>
+          
+<!--Explore the Determinants-->
+  <div class= “guide-section” id=“explore_det”> 
+      <h2 class=“guide-section-title”> Explore the Determinants </h2>
+         <img src="./assets/images/SDoH_simple.jpg" alt="Determinants of Health Visual" class="centerImage">
+    </div> 
+              
+<!--The Determinants-->
+    <div>
+        <h4>The Determinants</h4>
+           <p>The determinants of health act as a holistic way for clinicians and patients to view how different aspects of our lives affect our health.</p>
+           <p>After collecting over 160 metrics from 10 different healthcare organizations, we were able to break down the determinants into five separate groups, as well as determine their affect on health.</p>
+    </div>
+                     
+<!--Individual Behavior-->
+    <div>
+        <h4>Individual Behavior</h4>
+           <p>Our individual behavior affects us the most with a 38% stake in our overall health. From our psychological assets to our sleep patterns to our anxiety levels, the behavior we exhibit each day is a critical determinant for our physical and mental health and well being.</p>
+           <p>The individual behavior determinant is divided into 7 macrodeterminant categories, 15 mirodeterminants and is supported by 13 recorded metrics. </p>
+    </div>
+    <!--IB drop down-->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#flip5").click(function(){
+          $("#panel5").slideDown("slow");
+        });
+      });
+    </script>
+    <style>
+        #panel5, #flip5 {
+           padding: 5px;
+           text-align: center;
+        }
 
-	    <!-- Controls -->
-	    <a class="left carousel-control" href="#mobile-matrix" role="button" data-slide="prev">
-	    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	    	<span class="sr-only">Previous</span>
-	    </a>
-	    <a class="right carousel-control" href="#mobile-matrix" role="button" data-slide="next">
-	    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	    	<span class="sr-only">Next</span>
-	    </a>
-	</div>
+        #panel5 {
+           padding: 5px;
+           display: none;
+        }
+    </style>
+
+    <div id="flip5"><h6>View the divisions</h6></div>
+    <div id="panel5">
+       <h3>Individual Behavior</h3>
+          <p>Below is the break down of the individual behavior determinant listing the macrodeterminants and their related microdeterminants and metrics. </p>    
+            <ul>Psychological Assets</ul>
+                <ul><a>-Consciouentiousness level</a></ul>
+           <ul><a>-Self-efficacy</a></ul>
+                <ul><a>-Optimism level</a></ul>
+                <ul><a>-Life Satisfaction level </a></ul>
+                <ul><a>-Cognitive function in late life</a></ul>
+            <ul>Negative Mood and Affects</ul>
+                <ul><a>-Stress level </a></ul>
+                <ul><a>-Hopelessness level </a></ul>
+                <ul><a>-Anxiety level </a></ul>
+                <ul><a>-Depression level </a></ul>
+            <ul>Other Risk Related Behaviors</ul>
+                <ul><a>-Gun Behavior</a></ul>
+                <ul><a>-Sexual Activity</a></ul>
+                <ul><a>-Motor vehicle behavior</a></ul>
+            <ul>Physical Activity</ul>
+            <ul>Sleep Patterns</ul>
+            <ul>Diet Patterns</ul> 
+    </div>    
+                          
+<!--Social Circumstances-->
+    <div>
+       <h4>Social Circumstances</h4>                            
+       <p>The social circumstances we grew-up in, as wel as the circumstances of our adult lives form a 23% stake in our overall health. An individual’s social status, early childhood development and culture all impact our social development and our personal health.</p> 
+       <p>The social circumstances determinant is divided into 11 macrodeterminant categories, 14 mirodeterminants and is supported by 7 recorded metrics.</p>
+    </div>                          
+    <!--SC drop down-->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#flip6").click(function(){
+          $("#panel6").slideDown("slow");
+        });
+      });
+    </script>
+    <style>
+        #panel6, #flip6 {
+           padding: 5px;
+           text-align: center;
+        }
+
+        #panel6 {
+           padding: 30px;
+           display: none;
+        }
+    </style>
+
+    <div id="flip6"><h6>View the divisions</h6></div>
+    <div id="panel6">
+       <h3>Social Circumstances</h3>
+          <p>Below is the break down of the social circumstances determinant listing the macrodeterminants and their related microdeterminants and metrics. </p>    
+            <ul>Social Connectedness</ul>
+                <ul><a>-Civic participation </a></ul>
+                <ul><a>-Intimate relationships </a></ul>
+                <ul><a>-Quality of family support </a></ul>
+                <ul><a>-Quality of friends support</a></ul>
+                <ul><a>-Quality of community support</a></ul>
+            <ul>Social Status</ul>
+                <ul><a>-Subjective Social Status </a></ul>
+                <ul><a>-Individual income level </a></ul>
+                <ul><a>-Language and literary level</a></ul>
+                <ul><a>-Education level</a></ul>
+                <ul><a>-Occupation</a></ul>
+            <ul>Culture and Tradition</ul> 
+                <ul><a>-Religious involvement</a></ul>
+                <ul><a>-Community cultural norms</a></ul>
+                <ul><a>-Family cultural norms </a></ul>
+            <ul>Citizenship Status</ul>
+            <ul>Sexual Orientation</ul>
+            <ul>Military Service</ul> 
+            <ul>Gender Identity</ul>
+            <ul>History of Incarceration</ul>
+            <ul>Discrimination</ul> 
+            <ul>Work Conditions</ul> 
+    </div>                              
+                          
+<!--Genetics and Biology-->
+    <div>
+      <h4>Genetics and Biology</h4>
+          <p>From a genomic standpoint, undertanding our genetic make-up is important when it comes to our overall health, but it is not cost effective to sequence everyone’s genome at the point in time. Beyond genetics, our physical body struture and function also contribute to our health, resulting in a 21% total impact.</p> 
+           <p>The genetics and biology determinant is divided into 3 macrodeterminant categories, 15 mirodeterminants and is supported by 12 recorded metrics.  </p>
+    </div>                             
+    <!--GB drop down-->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#flip7").click(function(){
+          $("#panel7").slideDown("slow");
+        });
+      });
+    </script>
+    <style>
+        #panel7, #flip7 {
+           padding: 5px;
+           text-align: center;
+        }
+
+        #panel7 {
+           padding: 30px;
+           display: none;
+        }
+    </style>
+
+    <div id="flip7"><h6>View the divisions</h6></div>
+    <div id="panel7">
+       <h3>Genetics and Biology</h3>
+          <p>Below is the break down of the genetics and biology determinant listing the macrodeterminants and their related microdeterminants and metrics. </p>    
+            <ul>Genetics</ul>
+                <ul><a>-Single-gene </a></ul>
+                <ul><a>-Chromosomal </a></ul>
+                <ul><a>-Multifactorial </a></ul>
+                <ul><a>-Mitochondrial DNA-linked </a></ul>
+                <ul><a>-Gender </a></ul>
+                <ul><a>-Race and Ethnicity </a></ul>
+            <ul>Body Structure</ul>
+                <ul><a>-Age </a></ul>
+                <ul><a>-Height</a></ul>
+                <ul><a>-Weight</a></ul>
+                <ul><a>-Waist-Hip ration </a></ul>
+            <ul>Body Function</ul> 
+                <ul><a>-Bone density</a></ul>
+                <ul><a>-Blood pressure </a></ul>
+                <ul><a>-Nutritional status </a></ul>
+                <ul><a>-Biochemical function </a></ul>
+                <ul><a>-Sensory function </a></ul>
+                <ul><a>-Movement and balance</a></ul>
+                <ul><a>-Strength and robustness </a></ul>
+                <ul><a>-Fitness </a></ul>
+
+    </div> 
+
+    <!--Medical Care-->
+    <div>
+       <h4>Medical Care</h4>
+         <p>As a country, we solely rely on medical data when creating health records for patients. However, most people fail to realize that clinical care only contributes to a small portion of our overall health (11%). While this determinant is still important, it shouldn’t be the                                             only measure used.</p> 
+         <p>The medical care determinant is divided into 4 macrodeterminant categories, 6 mirodeterminants and is supported by 3 recorded metrics.</p>
+    </div>                              
+    <!--MC drop down-->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#flip9").click(function(){
+          $("#panel9").slideDown("slow");
+        });
+      });
+    </script>
+    <style>
+        #panel9, #flip9 {
+           padding: 5px;
+           text-align: center;
+        }
+
+        #panel9 {
+           padding: 30px;
+           display: none;
+        }
+    </style>
+
+    <div id="flip9"><h6>View the divisions</h6></div>
+    <div id="panel9">
+       <h3>Medical Care</h3>
+          <p>Below is the break down of the medical care determinant listing the macrodeterminants and their related microdeterminants and metrics. </p>    
+            <ul>Access to Healthcare</ul>
+               <ul><a>-Distance to resources </a></ul>
+                <ul><a>-Provider availability </a></ul>
+                <ul><a>-Vaccines and immunizations </a></ul>
+                <ul><a>-Quality of insurance </a></ul>
+            <ul>Quality of Healthcare</ul>
+                <ul><a>-Provider linguistic competancy </a></ul>
+                <ul><a>-Provider cultural competancy </a></ul>
+            <ul>Patient Engagement</ul> 
+            <ul>Health Literacy</ul>
+
+    </div>                           
+                          
+<!--Physical Environment-->
+    <div>
+      <h4>Physical Environment</h4>
+         <p>From the infrastructure of our cities to the quality of the air we breath, the physical environment is a important factor that contributes to our health, but it has the smallest impact at only 7%.</p> 
+         <p>The physical environment determinant is divided into 4 macrodeterminant categories, 16 mirodeterminants and is supported by 4 recorded metrics.</p>
+    </div>                              
+    <!--PE drop down-->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#flip10").click(function(){
+          $("#panel10").slideDown("slow");
+        });
+      });
+    </script>
+    <style>
+        #panel10, #flip10 {
+           padding: 5px;
+           text-align: center;
+        }
+
+        #panel10 {
+           padding: 30px;
+           display: none;
+        }
+    </style>
+
+    <div id="flip10"><h6>View the divisions</h6></div>
+    <div id="panel10">
+       <h3>Physical Environment</h3>
+          <p>Below is the break down of the physical environment determinant listing the macrodeterminants and their related microdeterminants and metrics. </p>    
+            <ul>Pollution</ul>
+                <ul><a>-Tobacco use exposure </a></ul>
+                <ul><a>-Air quality</a></ul>
+                <ul><a>-Lead exposure levels </a></ul>
+                <ul><a>-Carcinogen exposure </a></ul>
+                <ul><a>-Water quality </a></ul>
+            <ul>Location</ul>
+                <ul><a>-Access to healthy foods</a></ul>
+                <ul><a>-Crime level </a></ul>
+                <ul><a>-Transportation quality </a></ul>
+                <ul><a>-Crowding conditions</a></ul>
+                <ul><a>-Job opportunities </a></ul>
+                <ul><a>-Public space quality</a></ul>
+                <ul><a>-Educational opportunities </a></ul>
+                <ul><a>-Access to vocational training </a></ul>
+                <ul><a>-Recreational activity access</a></ul>
+                <ul><a>-Walkability </a></ul>
+                <ul><a>-Residence quality </a></ul>
+            <ul>Exposure to Firearms</ul> 
+            <ul>Allergens</ul>
+
+    </div>                          
+                     
+          
+
+          <!--Poster buy-->
+          <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script>
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideDown("slow");
+                });
+            });
+            </script>
+
+            <style>
+            #panel, #flip {
+                padding: 5px;
+                text-align: center;
+                background-color: #87C9D9;
+
+            }
+
+            #panel {
+                padding: 50px;
+                display: none;
+            }
+            </style>
+ 
+          <div id="flip"><h3>Buy the SDoH Poster</h3></div>
+          <div id="panel"><p>The SDoH poster is available for purchase for $150. The poster comes framed and is printed at 24”x 36”</p><p> Buy Now</p></div>
+     
+          
+          <!--Poster download-->
+          <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script>
+            $(document).ready(function(){
+                $("#flip2").click(function(){
+                    $("#panel2").slideDown("slow");
+                });
+            });
+            </script>
+
+            <style>
+            #panel2, #flip2 {
+                padding: 5px;
+                text-align: center;
+                background-color: #87C9D9;
+
+            }
+
+            #panel2 {
+                padding: 50px;
+                display: none;
+            }
+            </style>
+ 
+          <div id="flip2"><h3>Download the Free PDF </h3></div>
+          <div id="panel2"><p>Download: SDoH-poster.jpg</p></div>
+          
+          
+          
+        
+          <!--Methodology-->
+     <div class= “guide-section” id=“methodology”> 
+        <h2 class=“guide-section-title”> Methodology </h2> 
+        <p>A list of determinants were collected from 10 different health organizations and were used to create a single combined list of determinants.</p>
+                <p>The following categories of health determinants were chosen due to their consistency across most organizations: genetics, medical care, social circumstances, environment, and individual behavior. </p>
+                <p>The relative contribution of each of the determinant categories to one’s health was found by averaging the estimated values referenced by each primary source. </p>
+    </div> 
+          
+<!--About the Data drop down-->
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#flip4").click(function(){
+      $("#panel4").slideDown("slow");
+    });
+  });
+</script>
+<style>
+    #panel4, #flip4 {
+       padding: 5px;
+       text-align: center;
+    }
+
+    #panel4 {
+       padding: 30px;
+       display: none;
+    }
+</style>
+
+<div id="flip4"><h6>About this data</h6></div>
+<div id="panel4">
+   <h3>Studied Health Organizations</h3>
+        <ul>-National Institute of Health</ul>
+        <ul>-National Committee for Quality Assurance</ul>
+        <ul>-Group Health</ul> 
+        <ul>-National Committee on Vital and Health Statistics</ul>
+        <ul>-Capital BlueCross</ul> 
+        <ul>-Kentucky Cabinet for Health and Family Services</ul> 
+        <ul>-College of Nursing and Health, Wright State University</ul> 
+        <ul>-National Academy of Scienes</ul> 
+        <ul>-Corepoint Health</ul> 
+        <ul>-Care First</ul>
+
+
+   <h3> The Math Behind the Determinants</h3>
+      <p>Each determinant category was then averaged based on the values from each of the aforementioned sources. </p>
+        <ul><a>Behavior: (50 + 38 + 40 + 39 + 36 + 45 + 30) / 6   = 46.33 </a></ul>
+        <ul><a>Social: (15 + 40) / 2 = 27.5. Genetics: (20 + 30) / 2 = 25</a></ul>
+        <ul><a>Environment: (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4</a></ul>
+        <ul><a>Medical care: (10 + 10 + 20) / 3 = 13.33</a></ul>
+        <p>The ratio for each determinant was then found by taking the average values found for each of the determinant categories and dividing them by the total determinant value. </p>
+        <ul><a>Behavior: 46.33 / 120.56 = 38.43%</a></ul>
+        <ul><a>Social: 27.5 / 120.56 = 22.81%</a></ul>
+        <ul><a>Genetics: 25 / 120.56 = 20.74%</a></ul>
+        <ul><a>Environment: 8.4 / 120.56 = 7%</a></ul>
+        <ul><a>Medical care: 13.33 / 120.56 = 11.06%. 38.43 + 22.81 + 20.74 + 7 + 11.06 = 100.4%1</a></ul>
+        <p> The final percentages are as follows. </p>
+        <ul>Behavioral determinants at 38%</ul>
+        <ul>Social determinants at 23%</ul>
+        <ul>Genetic determinants at 21%</ul>
+        <ul>Medical care determinants at 11%</ul>
+        <ul>Environmental determinants at 7%</ul>
+
+</div>                
+      <hr>
+      
+          <!--Applications-->
+     <div class= “guide-section” id=“application”> 
+         <h2 class=“guide-section-title”> Applications </h2>
+         <p> The implementation of the determinants of healthcare would improve public health across the nation. By having healthcare workers take greater care in learning about a patient’s life experience and understanding how these experiences impact their overall health will result in better treatment and diagnoses. </p>
+         <p>The determinants of healthcare will also help establish a standard health record (SHR) that all medical personnel would use when meeting with patient’s. The creation of a SHR would greatly help with public research on population health, as well as the healthcare system as a whole. The SHR would also result in massive amounts of data that would be available for clinicians, students, patients and laboratories across the country. </p>
+     </div> 
+    </div>
 
 
 
-	<!-- <h1 class="section-padding">Health Data Metrics</h1>
-	<ul id="metricsList" class="section-padding">
-		<li id="1">Big Five Inventory(BFI)</li>
-		<li id="2">NIH Toolbox Self-Efficacy Survey</li>
-		<li>Life Orientation Test-Revised (LOT-R)</li>
-		<li>Behavioral Risk Factor Surveillance System questionnaire (BRFSS)</li>
-		<li>Generalized Anxiety Disorder Scale (GAD-7)</li>
-		<li>Patient Reported Outcome Measurement Information System (PROMIS) T-score</li>
-		<li>Patient health Questionnaire (PHQ-9)</li>
-		<li>Center for Epidemiologic Studies Depression Scale (CESD-R)</li>
-		<li>Alcohol Use Disorders Identification Test (AUDIT-C)</li>
-		<li>National Health Interview Survey (NHIS)</li>
-		<li>Exercise Vital Signs</li>
-		<li>Metabolic Equivalent of Task (MET minutes)</li>
-		<li>Adverse Childhood Experiences (ACE) score</li>
-		<li>Intimate Partner Violence: HARK questionnaire</li>
-		<li>National Health and Nutrition Examination Survey (NHANES III)</li>
-		<li>MacArthur SES indicator</li>
-		<li>US census</li>
-		<li>American Community Survey (ACS)</li>
-		<li>Cardiorespiratory fitness test</li>
-		<li>Strength testing</li>
-		<li>Motor system testing</li>
-		<li>Sensory system testing</li>
-		<li>Serum protein testing</li>
-		<li>Sphygmomanometry</li>
-		<li>DXA scan</li>
-		<li>Waist-hip ratio</li>
-		<li>Weight</li>
-		<li>Height</li>
-		<li>Genetic test</li>
-		<li>Rapid Estimate of Adult Literacy in Medicine (REALM)</li>
-		<li>Vaccine registries</li>
-		<li>Patient Activation Measure (PAM survey)</li>
-		<li>Geocoded residential address</li>
-	</ul> -->
 
-	<section class="section-padding" id="core-health-matrix">
-		<h1>Core Health Metrics Present Across Various Healthcare Organizations</h1>
+<!--The Data--> 
+  <div class=“header”> 
+    <h1 class=“guide-section-title”> The Data </h1> 
+   </div> 
+    
+        <!--Behind the Determinants--> 
+    <div class=“guide”> 
+      <div class=container”> 
+        <div class= “guide-section” id=“behind”> 
+          <h2 class=“guide-section-title”> Behind the Determinants </h2> 
+            <p>We collected a list of metrics from 10 separate health care organizations relating to the data they think is critical to be part of the patient’s health record. However, there was no consistency in the metrics used by these organizations: out of the total 169 recorded metrics, only 58 of them overlapped.</p>
+            <div class=“component”> 
+                          <ul>80% of the organizations asked for a list of medications</ul>
+                <uL>50% asked for martial status </ul>
+                <ul>40% asked for education level </ul>
+                <ul>30% asked for race/ethnicity </ul>
+                                <ul>10% asked about an individual’s financial status</ul>
+            </div>
+        </div> 
+              
+          <hr>
+              
+         <!--Explore the Data-->
+    <div class= “guide-section” id=“explore_dat”> 
+      <h2 class=“guide-section-title”> Explore the Data </h2>
+                  <img src="./assets/images/data_simple.jpg" alt="Collected Metrics Visual" align=middle>
+                  <p>Each point on the circle correlates with a metric that was included in an organization’s health record. Each color represents one of the ten organizations we studied for this project.</p>
+           <p>To view the entire interactive data visual, please visit our desktop site. </p>
+        </div> 
+         
+         <!--Data Accesss-->
+          <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script>
+            $(document).ready(function(){
+                $("#flip3").click(function(){
+                    $("#panel3").slideDown("slow");
+                });
+            });
+            </script>
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-6">
-					<p>View all health metrics <a href="https://docs.google.com/spreadsheets/d/1q-Xq3ws20sC0qzZ62wKkYGTyM-RKrSOGnvScDhS6v7I/edit#gid=0" target="_blank">here</a>.</p>
-				</div>
-				<div class="col-sm-6">
-					<div class="input-group">
-				    	<input type="text" class="form-control typeahead" placeholder="Search for...">
-				    	<span class="glyphicon glyphicon-remove-circle"></span>
-				    </div>
-				</div>
-			</div>
-		</div>
+            <style>
+            #panel3, #flip3 {
+                padding: 5px;
+                text-align: center;
+                background-color: #87C9D9;
 
-		<table class="table table-bordered">
-			<tbody>
-				<tr>
-					<td></td>
-					<td class="table-header-wrap">
-						<span class="table-header">National Institutes of Health</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">National Committee for Quality Assurance</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">Group Health</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">National Committee on Vital and Health Statistics</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">Capital BlueCross</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">Kentucky Cabinet for Health and Family Services</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">College of Nursing and Health, Wright State University</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">National Academy of Sciences </span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">Corepoint Health</span>
-					</td>
-					<td class="table-header-wrap">
-						<span class="table-header">CareFirst</span>
-					</td>
-				</tr>
-				<tr>
-					<td>Medication list</td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Allergy list</td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Name</td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Family history</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Lab and diagnostic results</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Marital status</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Alcohol use</td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Immunization</td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Surgery</td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Problem list</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Employer</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Substance abuse</td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Physical exam</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Medical history</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Education level</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Personal identifier</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td ></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Date</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Medication dosage</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Address</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Smoking status</td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Working diagnose</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Birthdate</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Race and ethnicity</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Name of primary caregiver</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Living arrangement</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Chief complaint</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Occupational history</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Insurance information</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Home telephone</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Work telephone</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Medication allergy</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Adverse drug reactions</td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Date for return visit</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Height</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Vital signs</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Advance directive</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Social history</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dietary habits</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Tobacco use</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Gender</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Blood type</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Chronic diseases</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past accidents/injuries history </td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Major illness</td>
-					<td class="selected"></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past illnesses history</td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dosing frequency</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Emergency contact</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Total charge</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Admission date</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Procedures</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Initial diagnosis</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Treatment provided</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Place of encounter</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Healthcare practitioner specialty</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Admitting diagnosis</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient disposition</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient demographics</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Discharge date</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Primary caregiver phone number</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Medication duration of use</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Reactions to allergies</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Date of last physical</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dates of tests and screenings</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dates of major illnesses</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dates of major surgeries</td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Follow-up plan for each encounter</td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Age</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Past behavioral health history</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Medical impression</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Date allergy was first discovered</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Sexual behavior</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Physical examination corresponding to patient's chief complaint</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Telephone encounters relevant to medical issues</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Preventive services that were ordered</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Preventive services that were performed</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Consultation reports corresponding to specialist referrals</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Consultation report addressed to referral source (for specialist records)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Reason for admission (discharge summary)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Treatment provided (discharge summary)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Clinical assessment corresponding to patient's chief complaint</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-				</tr>
-				<tr>
-					<td>Present significant acute medical conditions</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Significant surgical conditions</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Significant behavioral health conditions</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Consultant continuity of care - provider notes</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Consultant continuity of care - physical therapy notes</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Consultant continuity of care - home health nursing notes</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Consultant continuity of care - emergency room records</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Consultant continuity of care - hospital discharge summaries</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Date for follow-up with primary care office</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient input</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>History - history of present illness</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>History - review of systems</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Exam - diagnostic procedures ordered</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Exam - prior diagnostic test results</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past history - prior hospitalizations</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past history - genetic abnormalities</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Family history - health status</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Family history - genetic abnormalities</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Family history - cause of death of parents, siblings, children, father of baby</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Family history - specific diseases related to problems identified in the chief complaint</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Social history - sexual history</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Diagnostic procedures ordered</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Management options selected</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Social security number</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient telephone number</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Emergency contact phone number</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient primary language</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient religion</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Legal guardian</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Name of spouse</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Birthdate of spouse</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Primary health care professional ID number</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Encounter - primary professional name</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Encounter - primary professional ID number</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Encounter - Collaborative health care professionals</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Encounter - specialty of collaborative health care professionals</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past medical diagnoses</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Past hospitalizations</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Referral source</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Exposure to communicable disease</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Exposure to environmental hazards</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Travel out-of-country</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Weight</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Nursing diagnoses</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Medical diagnoses at discharge</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Country of origin</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Financial resource strain</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Health literacy</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Sexual orientation</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Physical activity</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Tobacco exposure</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Stress</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Negative mood and affect: depression</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Negative mood and affect: anxiety</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Psychological assets: conscientiousness</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Psychological assets: patient engagement/activation</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Psychological assets: optimism</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Psychological assets: self-efficacy</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Social connections and social isolation</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Exposure to violence</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Neighborhood and community compositional characteristics</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Health care providers</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Encounter information</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Appropriate results</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Results</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Necessary medical equipment</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Statistics</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Care plan</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Residence</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Self-reported health status</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Functional status</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient's relationship to subscriber/person eligible for entitlement</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Type of encounter</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Current or most recent industry</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Date of encounter (outpatient and physician services)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Facility identification</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Health care practitioner identification (outpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Location or address of encounter (outpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Attending physician identification (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Operating clinician identification (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Other diagnoses (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Qualifier for other diagnoses (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Other diagnoses (outpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>External cause of injury</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Birth weight of newborn</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Principal procedure (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Other procedures (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Dates of procedures (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Disposition of patient (inpatient)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Patient's expected sources of payment</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Injury related to employment</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-		<p id="view-more-link">
-			<span id="view-more-content">View all metrics</span>
-			<span class="glyphicon glyphicon-menu-down"></span>
-		</p>
-		<p id="no-data-text">No data available.</p>
-	</section>
-	
+            }
 
-	<div class="container-fluid references section-padding">
-		<div class="row">
-			<div class="col-sm-6">
-				<h1>Methodology</h1>
-				<ul>
-					<li>A list of determinants were collected from several health organizations [1 - 8]. These were used to create a combined list of determinants. The following categories of health determinants were chosen due to their consistency across most organizations [1, 2, 4, 5, 6, 7, 8]: genetics, medical care, social circumstances, environment, behavior. Research describing the relative contribution of each category was found. The relative contribution to ones health was determined by averaging the weights found from each primary source referenced here [9 - 13]. </li>
-					<li>The final weights for each category were based on the following sources: </li>
-					<li>DHHS[9]: Behavior 50%, genetics 20%, environment 20%, medical care 10%</li>
-					<li>JAMA[10]: Behavior 38%, environment 7%</li>
-					<li>Health Affairs[11]: Behavior 40%, genetics 30%, social 15%, environment 5%, medical care 10%</li>
-					<li>JAMA[12]: Behavior 39%, environment 5.4%</li>
-					<li>PLoS Medicine[13]: Behavior 36%</li>
-					<li>WHO[14]: Behavior 45%, environment 3%</li>
-					<li>U. Wisconsin[15]: Behavior 30%, social 40%, environment 10%, medical care 20%</li>
-					<li>Each determinant category was averaged based on the values from each source:</li>
-					<li>Behavior: (50 + 38 + 40 + 39 + 36 + 45 + 30) / 6 = 46.33<br/>Social: (15 + 40) / 2 = 27.5<br/>Genetics: (20 + 30) / 2 = 25<br/>Environment: (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4<br/>Medical care: (10 + 10 + 20) / 3 = 13.33</li>
-					<li>The ratio for each determinant was found based on the total of the averages:</li>
-					<li>Behavior = 46.33 / 120.56 = 38.43%<br/>Social = 27.5 / 120.56 = 22.81%<br/>Genetics = 25 / 120.56 = 20.74%<br/>Environment = 8.4 / 120.56 = 7%<br/>Medical care = 13.33 / 120.56 = 11.06%<br/>38.43 + 22.81 + 20.74 + 7 + 11.06 = 100.4%</li>
-					<li>Final determinant %’s were rounded to whole numbers:</li>
-					<li>38 (behavior) + 23 (social) + 21 (genetics) + 7 (environment) + 11 (medical care) = 100%</li>
-					<li>Final percentages:<br/>Behavior: 38%<br/>Social: 23%<br/>Genetics: 21%<br/>Medical care: 11%<br/>Environment: 7%</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<h1>References</h1>
-				<ul>
-					<li>1. <a class="word-break" href="http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html" target="_blank">NCHHSTP Social Determinants of Health</a>. (2014). Retrieved March 14, 2016, from <span class="word-break">http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html</span></li>
-					<li>2. <a class="word-break" href="http://www.who.int/hia/evidence/doh/en/" target="_blank">The determinants of health</a>. (n.d.). Retrieved March 14, 2016, from <span class="word-break">http://www.who.int/hia/evidence/doh/en/</span></li>
-					<li>3. <a class="word-break" href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health" target="_blank">Social Determinants of Health</a>. (n.d.). Retrieved March 14, 2016, from <span class="word-break">https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health</span></li>
-					<li>4. <a class="word-break" href="http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/" target="_blank">Beyond Health Care: The Role of Social Determinants in Promoting Health and Health Equity</a>. (n.d.). Retrieved March 14, 2016, from <span class="word-break">http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/</span></li>
-					<li>5. Schroeder, S. A. (2007). We Can Do Better — Improving the Health of the American People. New England Journal of Medicine N Engl J Med,357(12), 1221-1228.</li>
-					<li>6. <a href="http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf" target="_blank">The Relative Contribution of Multiple Determinants to Health Outcomes</a>. (n.d.). Retrieved March 14, 2016, from <span class="word-break">http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf</span></li>
-					<li>7. Capturing social and behavioral domains and measures in electronic health records: Phase 2. (2014). Washington D.C.: The National Academies Press.</li>
-					<li>8. Gruszin, S., & Jorm, L. (2010, December). <a class="word-break" href="http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf" target="_blank">Public Health Classifications Project (Rep.)</a>. Retrieved March 15, 2016, from New South Wales Department of Health website: <span class="word-break">http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf</span></li>
-					<li>9. DHHS, Public Health Service. “Ten Leading Causes of Death in the United States.” Atlanta (GA): Bureau of State Services, July 1980</li>
-					<li>Each determinant category was averaged based on the values from each source:</li>
-					<li>10. J.M.McGinnis and W.H.Foege. “Actual Causes of Death in the United States.” JAMA 270, No. 18 (1993):2207-12</li>
-					<li>11. J.M.McGinnis et al, “The Case for More Active Policy Attention to Health Promotion.” Health Affairs 21, no.2 (2002):78-93</li>
-					<li>12. A.Mokdad et al. “Actual Causes of Death in the United States 2000.” JAMA 291, no.10 (2004):1238-45</li>
-					<li>13. G.Danaei et al, “The Preventable Cuases of Death in the United States: Comparative Risk Assessment of Dietary, Lifestyle, and Metabolic Risk Factors.” PLoS Medicine 6, no. 4 (2009):e1000058</li>
-					<li>14. World Health Organization, Global Health Risks: Mortality and Burden of Disease Attributable to Selected Major Risks, Geneva: WHO, 2009</li>
-					<li>15. B. Booske et al., “Different Perspectives for Assigning Weights to Determinants of Health.” County Health Rankings Working Paper. Madison (WI): University of Wisconsin Population Health Institute, 2010</li>
-					<li>16. Schneiderman, N., Ironson, G., & Siegel, S. D. (2005). <a class="word-break" href="http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy" target="_blank">STRESS AND HEALTH: Psychological, Behavioral, and Biological Determinants</a>. Annual Review of Clinical Psychology, 1, 607-628. Retrieved March 16, 2016, from <span class="word-break">http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy</span></li>
-					<li>17. <a class="word-break" href="https://www.nlm.nih.gov/medlineplus/magazine/issues/summer09/articles/summer09pg17.html" target="_blank">EHR/PHR Basics</a>. (n.d.). Retrieved February 25, 2016, from <span class="word-break">https://www.nlm.nih.gov/medlineplus/magazine/issues/summer09/articles/summer09pg17.html</span></li>
-					<li>18. <a class="word-break" href="https://provider.ghc.org/open/render.jhtml?item=/open/workingWithGroupHealth/records-standards.xml" target="_blank">Group Health Medical Records and Documentation Standards</a>. (n.d.). Retrieved February 25, 2016, from <span class="word-break">https://provider.ghc.org/open/render.jhtml?item=/open/workingWithGroupHealth/records-standards.xml</span></li>
-					<li>19. <a class="word-break" href="https://provider.carefirst.com/carefirst-resources/provider/pdf/medical-record-documentation-standards-bok5129.pdf" target="_blank">Medical Record Documentation Standards</a>. (n.d.). Retrieved February 25, 2016, from <span class="word-break">https://provider.carefirst.com/carefirst-resources/provider/pdf/medical-record-documentation-standards-bok5129.pdf</span></li>
-					<li>20. <a class="word-break" href="https://www.capbluecross.com/NR/rdonlyres/DBCE2FA9-900D-4DFD-9AFA-5D7D8090A5DD/0/MedicalRecordDocumentationGuidelines.pdf" target="_blank">Practice Guidelines</a>. (n.d.). Retrieved February 25, 2016, from <span class="word-break">https://www.capbluecross.com/NR/rdonlyres/DBCE2FA9-900D-4DFD-9AFA-5D7D8090A5DD/0/MedicalRecordDocumentationGuidelines.pdf</span></li>
-					<li>21. <a class="word-break" href="http://chfs.ky.gov/" target="_blank">Hotlines</a>. (n.d.). Retrieved February 25, 2016, from <span class="word-break">http://chfs.ky.gov/</span>(c  pg.18) skipped TYPES OF HISTORY, GENERAL MULTI-SYSTEM EXAMINATION, DECISION MAKING</li>
-					<li>22. Renner, A. L., & Swart, J. C. (1997). <a class="word-break" href="http://www.ncbi.nlm.nih.gov/pubmed/9099030/?ncbi_mmode=std" target="_blank">Patient Core Data Set. Standard for a longitudinal health/medical record</a>. Comput Nurs., S7-13. Retrieved March 22, 2016, from <span class="word-break">http://www.ncbi.nlm.nih.gov/pubmed/9099030/?ncbi_mmode=std</span></li>
-					<li>23. Capturing social and behavioral domains and measures in electronic health records: Phase 2. (2014). Washington D.C.: The National Academies Press.</li>
-					<li>24. <a class="word-break" href="http://corepointhealth.com/sites/default/files/whitepapers/continuity-of-care-record-ccr.pdf" target="_blank">Understanding the Continuity of Care Record</a>(Rep.). (2009). Retrieved March 22, 2016, from Corepoint Health website: <span class="word-break">http://corepointhealth.com/sites/default/files/whitepapers/continuity-of-care-record-ccr.pdf</span></li>
-					<li>25. <a class="word-break" href="https://aspe.hhs.gov/legacy-page/ncvhs-report-core-health-data-elements-148766" target="_blank">Core Health Data Elements Report of the National Committee on Vital and Health Statistics</a>(Rep.). (11996, August). Retrieved March 22, 2016, from US Department of Health and Human Services website: <span class="word-break">https://aspe.hhs.gov/legacy-page/ncvhs-report-core-health-data-elements-148766</span></li>
-					<li>26. <a class="word-break" href="https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf" target="_blank">2015 Edition Certification Companion Guide</a>. (2016, March 25). Retrieved March 31, 2016, from <span class="word-break">https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf</span></li>
-
-				</ul>
-			</div>
-		</div>
-	</div>
-
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
-<!-- <script src="http://mbostock.github.io/d3/talk/20111018/d3/d3.layout.js"></script> -->
-<script src = "js/d3.js"></script>
-<script src = "js/mobile_metrix.js"></script>
-
-</body>
+            #panel3 {
+                padding: 50px;
+                display: none;
+            }
+            </style>
+ 
+          <div id="flip3"><h3>Download the Data Set</h3></div>
+              <div id="panel3"><p>Download: SDoH-metrics.xl</p></div>
+   
+  
+         
+          
+<!--Contact US-->          
+   <div class= “header>
+      <h1 class=“guide-section-title”> Contact Us </h1>
+   </div>
+   <div class=“guide”> 
+   <div class=container”> 
+     <div class= “guide-section” id=“contact”> 
+        <h2 class=“guide-section-title”> Get in Touch! </h2> 
+        <p>If you would like to learn more about the Healthcare Determinants, or would like to find out about other resources available to implement the determinants in your work place, please send us a message! .</p>
+                <div class="component">
+                     <ul> Involution Studios </ul> 
+                     <ul>Phone: 617-803-7073 </ul> 
+                     <ul>Email: info@goinvo.com </ul>
+                     <ul>Address: 661 Massachusetts Ave, 3rd Floor, Arlington, MA, 02476</ul>
+            </div>
+        </div>
+     </div>
+              </div>
+  
+              </body>
+          </html>
