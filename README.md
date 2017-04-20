@@ -1,8 +1,8 @@
-# HealthDeterminants
+# Determinants of Health
 
 
 
-REFERENCES
+# References
 
 1. NCHHSTP Social Determinants of Health. (2014). Retrieved March 14, 2016, from http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html
 2. The determinants of health. (n.d.). Retrieved March 14, 2016, from http://www.who.int/hia/evidence/doh/en/
@@ -21,7 +21,7 @@ REFERENCES
 15. B. Booske et al., “Different Perspectives for Assigning Weights to Determinants of Health.” County Health Rankings Working Paper. Madison (WI): University of Wisconsin Population Health Institute, 2010
 16. Schneiderman, N., Ironson, G., & Siegel, S. D. (2005). STRESS AND HEALTH: Psychological, Behavioral, and Biological Determinants. Annual Review of Clinical Psychology, 1, 607-628. Retrieved March 16, 2016, from http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy
 
-# METHODOLOGY
+# Methodology
 
 The 5 main determinants of health (genetics, medical care, social circumstances, environment, and individual behavior) were chosen due to their consistency across the following 7 out of 8 organizations:
 
