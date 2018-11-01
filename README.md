@@ -1,5 +1,7 @@
 # Determinants of Health
-
+ An open source visualization of the social determinants of health.
+ 
+ ![Determinants of Health Visualized](https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_medium.jpg)
 
 
 # References
@@ -84,3 +86,5 @@ Genetic determinants at 21%.
 Medical care determinants at 11%.
 
 Environmental determinants at 7%.
+
+### For guidance integrating the Determinants of Health into your product or service, contact us at hello@goinvo.com. ###
