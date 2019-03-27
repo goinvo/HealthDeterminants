@@ -88,3 +88,6 @@ Medical care determinants at 11%.
 Environmental determinants at 7%.
 
 ### For guidance integrating the Determinants of Health into your product or service, contact us at hello@goinvo.com. ###
+
+### License ###
+Health Determinants is [Apache 2.0](https://github.com/goinvo/HealthDeterminants/blob/master/LICENSE) licensed.
