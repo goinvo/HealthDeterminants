@@ -90,4 +90,9 @@ Environmental determinants at 7%.
 ### For guidance integrating the Determinants of Health into your product or service, contact us at hello@goinvo.com. ###
 
 ### License ###
-Health Determinants is [Apache 2.0](https://github.com/goinvo/HealthDeterminants/blob/master/LICENSE) licensed.
+Health Determinants digital service is [Apache 2.0](https://github.com/goinvo/HealthDeterminants/blob/master/LICENSE) licensed.
+
+The Health Determinants content and poster is licensed under Creative Commons Attribution v4.
+If you want to reference this work (in a paper, for example), feel free to use:
+
+Choi, Edwin, and Juhan Sonin. 2019. “Determinants of Health.” GoInvo. https://www. goinvo.com/vision/determinants-of-health/.
