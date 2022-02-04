@@ -95,4 +95,4 @@ Health Determinants digital service is [Apache 2.0](https://github.com/goinvo/He
 The Health Determinants content and poster is licensed under Creative Commons Attribution v4.
 If you want to reference this work (in a paper, for example), feel free to use:
 
-Choi, Edwin, and Juhan Sonin. 2019. “Determinants of Health.” GoInvo. https://www. goinvo.com/vision/determinants-of-health/.
+Choi, Edwin, and Juhan Sonin. 2019. “Determinants of Health.” GoInvo. https://www.goinvo.com/vision/determinants-of-health/.
